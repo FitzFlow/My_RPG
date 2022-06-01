@@ -20,3 +20,6 @@ Now enjoy !</br>
 </br>
 </br>
 PS: It will maybe have some update because we will continue to update our game</br>
+</br>
+PS2: We have developed this game with Fedora / macOS OS. with some library.
+    You need to have them for a functional game.
