@@ -13,5 +13,5 @@ void load_interior(all_t *all)
     all->interior.player_int2 = init_entity(PLAYER_HOUSE2, NULL, NULL);
     all->interior.other_int = init_entity(OTHER_HOUSE, NULL, NULL);
     all->interior.other_int2 = init_entity(OTHER_HOUSE2, NULL, NULL);
-    all->interior.interact_e = init_entity(INTERACT_E, &V2F(2210, 1005), NULL);
+    all->interior.interact_e = init_entity(INTERACT_E, &v2f(2210, 1005), NULL);
 }

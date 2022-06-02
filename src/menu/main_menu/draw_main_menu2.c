@@ -10,13 +10,13 @@
 void draw_selection_and_tuto(all_t *all)
 {
     if (SELECT_PLAYER == selection) {
-        animate_button(all, BACK_BTN, 277, V2F(480, 612));
+        animate_button(all, BACK_BTN, 277, v2f(480, 612));
         draw_selection_player(all);
     }
     if (STATE_OF_GAME == main_menu && SELECT_PLAYER == tuto) {
         draw_sprite(WINDOW, all->menu->tuto_key->sprite, NULL);
-        animate_button(all, BACK_BTN, 277, V2F(480, 566));
-        sfSprite_setPosition(BACK_BTN->sprite, V2F(490, 576));
+        animate_button(all, BACK_BTN, 277, v2f(480, 566));
+        sfSprite_setPosition(BACK_BTN->sprite, v2f(490, 576));
         draw_sprite(WINDOW, BACK_BTN->sprite, NULL);
     }
 }

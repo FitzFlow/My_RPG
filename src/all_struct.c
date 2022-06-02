@@ -23,7 +23,7 @@ void init_mission(all_t *all)
     all->mission->mission3 = m_none;
     all->mission->mission4 = m_none;
     all->mission->mission5 = mission_5_not_start;
-    CIRCLE_M = create_circle(V2F(2570, 440), 15, sfYellow);
+    CIRCLE_M = create_circle(v2f(2570, 440), 15, sfYellow);
 }
 
 void resize_fight_text(all_t *all)
@@ -55,10 +55,10 @@ void fight_text(all_t *all)
     sfText_setFont(FIGHT->fight_text.text, FIGHT->fight_text.font);
     sfText_setFont(FIGHT->fight_text.ennemy, FIGHT->fight_text.font);
     sfText_setFont(FIGHT->fight_text.ennemy_pv, FIGHT->fight_text.font);
-    sfText_setPosition(FIGHT->fight_text.text, V2F(299, 237));
-    sfText_setPosition(FIGHT->fight_text.text_pv, V2F(354, 237));
-    sfText_setPosition(FIGHT->fight_text.ennemy, V2F(299, 79));
-    sfText_setPosition(FIGHT->fight_text.ennemy_pv, V2F(354, 79));
+    sfText_setPosition(FIGHT->fight_text.text, v2f(299, 237));
+    sfText_setPosition(FIGHT->fight_text.text_pv, v2f(354, 237));
+    sfText_setPosition(FIGHT->fight_text.ennemy, v2f(299, 79));
+    sfText_setPosition(FIGHT->fight_text.ennemy_pv, v2f(354, 79));
     resize_fight_text(all);
 }
 
@@ -67,7 +67,7 @@ all_t *load_all_struct(void)
     all_t *all = malloc(sizeof(all_t));
 
     all->window = init_window();
-    all->cadre = init_entity(CADRE, &V2F(1116, 509), NULL);
+    all->cadre = init_entity(CADRE, &v2f(1116, 509), NULL);
     load_menu(all);
     load_game(all);
     load_filter(all);

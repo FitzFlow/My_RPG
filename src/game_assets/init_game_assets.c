@@ -13,8 +13,8 @@ lean_bottle_t *init_bottle_of_lean(const int *pos)
 
     lean->sprite = sfSprite_create();
     lean->texture = sfTexture_createFromFile(LEAN_BOTTLE, NULL);
-    lean->size = V2F(1, 1);
-    lean->position = V2F(pos[0], pos[1]);
+    lean->size = v2f(1, 1);
+    lean->position = v2f(pos[0], pos[1]);
     lean->taked = false;
 
     sfSprite_setTexture(lean->sprite, lean->texture, sfTrue);
@@ -22,7 +22,7 @@ lean_bottle_t *init_bottle_of_lean(const int *pos)
     if (pos != NULL)
         sfSprite_setPosition(lean->sprite, lean->position);
     else
-        sfSprite_setPosition(lean->sprite, V2F(0, 0));
+        sfSprite_setPosition(lean->sprite, v2f(0, 0));
     return (lean);
 }
 

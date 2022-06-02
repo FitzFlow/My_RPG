@@ -54,7 +54,7 @@ void init_view(all_t *all)
         pos = sfSprite_getPosition(all->player->sprite);
         pos.x += 50;
         pos.y += 50;
-        all->view_player1 = my_create_view(WINDOW, pos, V2F(580, 590));
+        all->view_player1 = my_create_view(WINDOW, pos, v2f(580, 590));
         sfRenderWindow_setView(WINDOW, all->view_player1);
         hud_sprite_pos(all);
         phone_sprite_pos(all);

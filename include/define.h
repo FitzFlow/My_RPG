@@ -147,6 +147,8 @@
     #define KEY_RELEASE all->window->event.type == sfEvtKeyReleased
     #define KEY(my_key) all->window->event.key.code == my_key
 
+    #define ALT_F4 KEY_RELEASE && KEY(sfKeyLAlt) && KEY(sfKeyF4)
+
     #define CIRCLE_M all->mission->circle_mission
     #define MISSION1 all->mission->mission1
     #define MISSION2 all->mission->mission2
@@ -164,7 +166,7 @@
     #define I_RECT(left, top, w, h) (sfIntRect) {left, top, w, h}
     #define F_RECT(left, top, w, h) (sfFloatRect) {left, top, w, h}
     #define GET_PIXEL(img, x, y) sfImage_getPixel(img, x, y)
-    #define V2F(x, y) (sfVector2f) {x, y}
+    #define v2f(x, y) (sfVector2f) {x, y}
 
     #define PNJ_S pnj->pnj->sprite
     #define PNJ_M all->pnj
@@ -189,14 +191,14 @@
     #define PAUSE_MENU all->menu_pause->pause_menu
     #define PAUSE_TXT all->menu_pause->pause_txt
 
-    #define POS_PAUSE_MENU V2F(view.x - 320, view.y - 340)
-    #define POS_PAUSE_BTN V2F(view.x - 70, view.y - 120)
-    #define POS_PAUSE_TXT V2F(view.x - 66, view.y - 220)
-    #define POS_PAUSE_CADRE V2F(view.x - 70, view.y - 230)
+    #define POS_PAUSE_MENU v2f(view.x - 320, view.y - 340)
+    #define POS_PAUSE_BTN v2f(view.x - 70, view.y - 120)
+    #define POS_PAUSE_TXT v2f(view.x - 66, view.y - 220)
+    #define POS_PAUSE_CADRE v2f(view.x - 70, view.y - 230)
 
-    #define POS_RES_BTN V2F(view.x - 70, view.y - 135)
-    #define POS_SET_BTN V2F(view.x - 70, view.y - 25)
-    #define POS_MAIN_BTN V2F(view.x - 70, view.y + 85)
+    #define POS_RES_BTN v2f(view.x - 70, view.y - 135)
+    #define POS_SET_BTN v2f(view.x - 70, view.y - 25)
+    #define POS_MAIN_BTN v2f(view.x - 70, view.y + 85)
 
     #define RESUME_BUTTON menu_pause->resume_button
     #define SETTING_BUTTON menu_pause->setting_button

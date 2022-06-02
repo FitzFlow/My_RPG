@@ -11,8 +11,8 @@ player_t *init_player(void)
 {
     player_t *player = malloc(sizeof(player_t));
     player->sprite = sfSprite_create();
-    player->position = V2F(1925, 1150);
-    player->size = V2F(1, 1);
+    player->position = v2f(1925, 1150);
+    player->size = v2f(1, 1);
     player->rect = I_RECT(0, 0, 31, 49);
     sfSprite_setTextureRect(player->sprite, player->rect);
     sfSprite_setPosition(player->sprite, player->position),

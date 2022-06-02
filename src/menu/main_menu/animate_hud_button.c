@@ -9,8 +9,8 @@
 
 void animate_inventory_btn(all_t *all)
 {
-    if (is_on_sprite_hud(WINDOW, 48, V2F(1217, 666))) {
-        all->game->inventory->size = V2F(0.4, 0.6);
+    if (is_on_sprite_hud(WINDOW, 48, v2f(1217, 666))) {
+        all->game->inventory->size = v2f(0.4, 0.6);
         sfSprite_setScale(all->game->inventory->sprite,
         all->game->inventory->size);
         sfVector2f pos = sfView_getCenter(all->view_player1);
@@ -24,7 +24,7 @@ void animate_inventory_btn(all_t *all)
         all->game->inventory->rect.left = 0;
         sfSprite_setTextureRect(all->game->inventory->sprite,
         all->game->inventory->rect);
-        all->game->inventory->size = V2F(0.3, 0.5);
+        all->game->inventory->size = v2f(0.3, 0.5);
         sfSprite_setScale(all->game->inventory->sprite,
         all->game->inventory->size);
     }
@@ -32,8 +32,8 @@ void animate_inventory_btn(all_t *all)
 
 void animate_pause_btn(all_t *all)
 {
-    if (is_on_sprite_hud(WINDOW, 48, V2F(1217, 58))) {
-        all->game->pause->size = V2F(0.4, 0.6);
+    if (is_on_sprite_hud(WINDOW, 48, v2f(1217, 58))) {
+        all->game->pause->size = v2f(0.4, 0.6);
         sfSprite_setScale(all->game->pause->sprite,
         all->game->pause->size);
         sfVector2f pos = sfView_getCenter(all->view_player1);
@@ -47,7 +47,7 @@ void animate_pause_btn(all_t *all)
         all->game->pause->rect.left = 0;
         sfSprite_setTextureRect(all->game->pause->sprite,
         all->game->pause->rect);
-        all->game->pause->size = V2F(0.3, 0.5);
+        all->game->pause->size = v2f(0.3, 0.5);
         sfSprite_setScale(all->game->pause->sprite,
         all->game->pause->size);
     }

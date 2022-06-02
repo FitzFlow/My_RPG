@@ -21,7 +21,7 @@ sfVector2f get_coord_spawn(all_t *all)
     int end = 10000;
 
     if (!size.x || !size.y)
-        return V2F(0, 0);
+        return v2f(0, 0);
     srand(random_number());
     for (bool value = false; value == false && end; end--) {
         new_pos.x = rand() % size.x;

@@ -13,7 +13,7 @@ void move_view_game(all_t *all, sfVector2f pos, int x, int y)
         return;
     if ((pos.x + x >= 510 && pos.x + x <= 2700 && !y) ||
     (pos.y + y >= 495 && pos.y + y <= 2705 && !x))
-        sfView_move(all->view_game, V2F(x, y));
+        sfView_move(all->view_game, v2f(x, y));
 }
 
 void move(all_t *all, int x, int y)
@@ -23,14 +23,14 @@ void move(all_t *all, int x, int y)
     if ((pos.x + x >= 250 && pos.x + x <= 2780 && !y) ||
     (pos.y + y >= 250 && pos.y + y <= 2840 && !x)) {
         if (all->interior_enum == in_city) {
-            sfView_move(all->view_player1, V2F(x, y));
+            sfView_move(all->view_player1, v2f(x, y));
             move_view_game(all, pos, x, y);
         }
         hud_sprite_pos(all);
         phone_sprite_pos(all);
         pause_sprite_pos(all);
     }
-    sfSprite_move(all->player->sprite, V2F(x, y));
+    sfSprite_move(all->player->sprite, v2f(x, y));
     sfRenderWindow_setView(WINDOW, all->view_player1);
 }
 

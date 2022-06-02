@@ -16,7 +16,7 @@ void load_map(all_t *all)
     all->game->map6 = init_map(MAP6, NULL, NULL);
     all->game->map7 = init_map(MAP7, NULL, NULL);
     all->game->mini_map = init_entity(MIN_MAP_BG, NULL, NULL);
-    sfSprite_scale(all->game->mini_map->sprite, V2F(0.42, 0.8));
+    sfSprite_scale(all->game->mini_map->sprite, v2f(0.42, 0.8));
     all->game->debug = init_entity(COLLISION, NULL, NULL);
 }
 
@@ -27,12 +27,12 @@ void load_game(all_t *all)
     if (!all->game)
         return;
     load_map(all);
-    PAUSE = init_entity(HUD_PAUSE, &V2F(1200, 6), &I_RECT(0, 0, 143, 137));
-    sfSprite_setScale(PAUSE->sprite, V2F(0.3, 0.5));
-    INVENTORY = init_entity(HUD_INV, &V2F(1200, 645), &I_RECT(0, 0, 143, 137));
-    sfSprite_setScale(INVENTORY->sprite, V2F(0.3, 0.5));
+    PAUSE = init_entity(HUD_PAUSE, &v2f(1200, 6), &I_RECT(0, 0, 143, 137));
+    sfSprite_setScale(PAUSE->sprite, v2f(0.3, 0.5));
+    INVENTORY = init_entity(HUD_INV, &v2f(1200, 645), &I_RECT(0, 0, 143, 137));
+    sfSprite_setScale(INVENTORY->sprite, v2f(0.3, 0.5));
     all->view_game = my_create_view(WINDOW,
-    GET_POS_S(PLAYER_S), V2F(1000, 1000));
+    GET_POS_S(PLAYER_S), v2f(1000, 1000));
     all->view_player1 = NULL;
     all->restart = 0;
     load_phone(all);

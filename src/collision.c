@@ -72,10 +72,10 @@ bool check_up(sfVector2f pos, sfImage *filter, int *change_draw)
 
 bool check_colision(sfVector2f pos, sfImage *filter, int *change_d)
 {
-    if (check_x(pos, V2F(1, 0), filter, change_d) &&
-    check_x(pos, V2F(-1, 0), filter, change_d) &&
-    check_y(pos, V2F(0, 1), filter, change_d) &&
-    check_y(pos, V2F(0, -1), filter, change_d))
+    if (check_x(pos, v2f(1, 0), filter, change_d) &&
+    check_x(pos, v2f(-1, 0), filter, change_d) &&
+    check_y(pos, v2f(0, 1), filter, change_d) &&
+    check_y(pos, v2f(0, -1), filter, change_d))
         return false;
     return true;
 }
