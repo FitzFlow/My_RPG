@@ -22,7 +22,7 @@ void mission_3(all_t *all, mob_t *luidji)
     if (all->interior_enum != other_house || MISSION4 != m_none ||
     MISSION2 != finish || MISSION3 == finish)
         return;
-    sfSprite_setPosition(luidji->pnj->sprite, V2F(1950, 2650));
+    sfSprite_setPosition(luidji->pnj->sprite, v2f(1950, 2650));
     if (MISSION3 == m_none && all->interior_enum == other_house)
         MISSION3 = loading;
     if (MISSION3 == loading && interaction(all, luidji, loading, 8))

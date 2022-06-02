@@ -49,25 +49,24 @@ void change_girl(all_t *all)
     }
 }
 
+void draw_dress_interaction(all_t *all)
+{
+    sfSprite_setPosition(all->interior.interact_e->sprite, v2f(2210, 985));
+    draw_sprite(WINDOW, all->interior.interact_e->sprite, NULL);
+}
+
 void change_dress(all_t *all)
 {
+    sfVector2f pos = sfSprite_getPosition(all->player->sprite);
+
     if (FIGHT->play_selection == player_boy) {
-        sfVector2f pos = sfSprite_getPosition(all->player->sprite);
         if (pos.x > 2135 && pos.x < 2185 && pos.y > 983 && pos.y < 992)
             change_boy(all);
     }
     if (FIGHT->play_selection == player_girl) {
-        sfVector2f pos = sfSprite_getPosition(all->player->sprite);
         if (pos.x > 2135 && pos.x < 2185 && pos.y > 983 && pos.y < 992)
             change_girl(all);
     }
-}
-
-void draw_dress_interaction(all_t *all)
-{
-    sfSprite_setPosition(all->interior.interact_e->sprite,
-    (sfVector2f){2210, 985});
-    draw_sprite(WINDOW, all->interior.interact_e->sprite, NULL);
 }
 
 void change_player_dress(all_t *all)

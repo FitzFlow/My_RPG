@@ -136,7 +136,6 @@ void anim_all_npc(sfSprite *sprite, all_t *all, int direction);
 void draw_my_npc(all_t* all, mob_t* pnj);
 void draw_pnj_behind(all_t *all);
 void draw_pnj_front(all_t *all);
-void draw_npc(all_t *all);
 void move_pnj(all_t *all, mob_t *john, sfVector2f sens, int direction);
 
 /*    MENU SELECTION    */

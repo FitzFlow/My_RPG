@@ -10,8 +10,8 @@
 // void get_lean_bottle(all_t *all)
 // {
 //     printf("pass\n");
-//     sfVector2f player_pos = V2F(0, 0);
-//     sfVector2f lean_pos = V2F(0, 0);
+//     sfVector2f player_pos = v2f(0, 0);
+//     sfVector2f lean_pos = v2f(0, 0);
 //     int cpt = 0;
 
 //     while (all->lean[cpt] != NULL) {
@@ -49,7 +49,7 @@ void mission_4(all_t *all, mob_t *freeze)
         return;
     draw_my_npc(all, freeze);
     if (interaction(all, freeze, m_none, 8)) {
-        sfSprite_setPosition(freeze->pnj->sprite, V2F(855, 1960));
+        sfSprite_setPosition(freeze->pnj->sprite, v2f(855, 1960));
         MISSION4 = start;
     }
     if (KEY(sfKeyT) && MISSION4 == start) {
@@ -61,5 +61,5 @@ void mission_4(all_t *all, mob_t *freeze)
         all->mission->mission5 = mission_5_loading;
     }
     if (MISSION4 == finish)
-        move_pnj(all, freeze, V2F(-5, 0), 55);
+        move_pnj(all, freeze, v2f(-5, 0), 55);
 }

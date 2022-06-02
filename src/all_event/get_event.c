@@ -39,13 +39,13 @@ void pause_menu_event(all_t *all)
             animate_pause_btn(all);
     if (IN_PAUSE) {
         if (CLICK && MOUSE(sfMouseLeft) &&
-        is_on_square_sprite_hud(WINDOW, V2F(492, 203), V2F(290, 74)))
+        is_on_square_sprite_hud(WINDOW, v2f(492, 203), v2f(290, 74)))
             all->game_pause = not_in_pause;
         if (CLICK && MOUSE(sfMouseLeft) &&
-        is_on_square_sprite_hud(WINDOW, V2F(492, 350), V2F(290, 74)))
+        is_on_square_sprite_hud(WINDOW, v2f(492, 350), v2f(290, 74)))
             nothing();
         if (CLICK && MOUSE(sfMouseLeft) &&
-        is_on_square_sprite_hud(WINDOW, V2F(492, 480), V2F(290, 74))) {
+        is_on_square_sprite_hud(WINDOW, v2f(492, 480), v2f(290, 74))) {
             all->state_of_game = main_menu;
             all->select_player->character_menu = none;
             all->game_pause = not_in_pause;
@@ -56,25 +56,28 @@ void pause_menu_event(all_t *all)
     }
 }
 
+void event_in_game(all_t *all)
+{
+    (KEY_RELEASE && KEY(sfKeyE)) ? interaction_npc(all) : 0;
+    set_in_pause(all);
+    interact_with_player_house(all);
+    set_in_inventory(all);
+    animate_inventory_btn(all);
+    pause_menu_event(all);
+    change_dress(all);
+    interact_with_button(all);
+    if (FIGHT->fight1 == in_fight)
+        fight_system(all, &all->player->pv, &FIGHT->ennemy.pv);
+}
+
 void event(all_t *all)
 {
     while (sfRenderWindow_pollEvent(WINDOW, &all->window->event)) {
         main_menu_interaction(all);
-        if (all->window->event.type == sfEvtClosed || (STATE_OF_GAME != game
-        && KEY_RELEASE && KEY(sfKeyEscape)))
+        if (all->window->event.type == sfEvtClosed || (ALT_F4))
             sfRenderWindow_close(WINDOW);
         zoom_mini_map(all);
-        if (STATE_OF_GAME == game) {
-            (KEY_RELEASE && KEY(sfKeyE)) ? interaction_npc(all) : 0;
-            set_in_pause(all);
-            interact_with_player_house(all);
-            set_in_inventory(all);
-            animate_inventory_btn(all);
-            pause_menu_event(all);
-            change_dress(all);
-            interact_with_button(all);
-            if (FIGHT->fight1 == in_fight)
-                fight_system(all, &all->player->pv, &FIGHT->ennemy.pv);
-        }
+        if (STATE_OF_GAME == game)
+            event_in_game(all);
     }
 }

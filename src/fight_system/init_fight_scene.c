@@ -10,22 +10,22 @@
 fight_system_t *init_fight(void)
 {
     fight_system_t *fight_system = malloc(sizeof(fight_system_t));
-    fight_system->back = init_entity(FBACK_BTN, &V2F(983, 126),
+    fight_system->back = init_entity(FBACK_BTN, &v2f(983, 126),
     &I_RECT(0, 0, 64, 24));
     fight_system->fight = init_entity(FIGHT_SCENE, NULL, NULL);
-    fight_system->attack_button = init_entity(ATTACK_BUTTON, &V2F(1090, 89),
+    fight_system->attack_button = init_entity(ATTACK_BUTTON, &v2f(1090, 89),
     &I_RECT(0, 0, 64, 24));
-    fight_system->run_button = init_entity(RUN_FIGHT, &V2F(1090, 121),
+    fight_system->run_button = init_entity(RUN_FIGHT, &v2f(1090, 121),
     &I_RECT(0, 0, 64, 24));
     fight_system->brute_force_atk = init_entity(BRUTE_FORCE_ATK,
-    &V2F(1161, 127), &I_RECT(0, 0, 64, 24));
-    fight_system->ddos_atk = init_entity(DDOS_ATK, &V2F(1061, 91),
+    &v2f(1161, 127), &I_RECT(0, 0, 64, 24));
+    fight_system->ddos_atk = init_entity(DDOS_ATK, &v2f(1061, 91),
     &I_RECT(0, 0, 64, 24));
-    fight_system->mitm_atk = init_entity(MITM_ATK, &V2F(1161, 92),
+    fight_system->mitm_atk = init_entity(MITM_ATK, &v2f(1161, 92),
     &I_RECT(0, 0, 64, 24));
-    fight_system->sql_atk = init_entity(SQL_ATK, &V2F(1061, 126),
+    fight_system->sql_atk = init_entity(SQL_ATK, &v2f(1061, 126),
     &I_RECT(0, 0, 64, 24));
-    fight_system->inform_table = init_entity(INFORMATION_TABLE, &V2F(961, 33),
+    fight_system->inform_table = init_entity(INFORMATION_TABLE, &v2f(961, 33),
     NULL);
     return fight_system;
 }

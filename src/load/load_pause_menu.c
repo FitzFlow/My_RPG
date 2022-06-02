@@ -14,11 +14,11 @@ void load_button_menu_pause(all_t *all)
     &I_RECT(0, 0, 272, 82));
     all->MENU_BUTTON = init_entity(SETTING_BTN, NULL,
     &I_RECT(0, 0, 272, 82));
-    all->RESUME_BUTTON->size = V2F(0.5, 0.8);
+    all->RESUME_BUTTON->size = v2f(0.5, 0.8);
     sfSprite_setScale(all->RESUME_BUTTON->sprite, all->RESUME_BUTTON->size);
-    all->SETTING_BUTTON->size = V2F(0.5, 0.8);
+    all->SETTING_BUTTON->size = v2f(0.5, 0.8);
     sfSprite_setScale(all->SETTING_BUTTON->sprite, all->SETTING_BUTTON->size);
-    all->MENU_BUTTON->size = V2F(0.5, 0.8);
+    all->MENU_BUTTON->size = v2f(0.5, 0.8);
     sfSprite_setScale(all->MENU_BUTTON->sprite, all->MENU_BUTTON->size);
 }
 
@@ -31,13 +31,13 @@ void load_pause_menu(all_t *all)
     PAUSE_MENU = init_entity(PAUSE_MENU_T, NULL, NULL);
     PAUSE_TXT = init_entity(PAUSE_TXT_T, NULL, &I_RECT(0, 0, 257, 90));
 
-    PAUSE_MENU->size = V2F(0.6, 0.9);
+    PAUSE_MENU->size = v2f(0.6, 0.9);
     sfSprite_setScale(PAUSE_MENU->sprite, PAUSE_MENU->size);
-    PAUSE_BTN->size = V2F(0.5, 0.8);
+    PAUSE_BTN->size = v2f(0.5, 0.8);
     sfSprite_setScale(PAUSE_BTN->sprite, PAUSE_BTN->size);
-    PAUSE_TXT->size = V2F(0.5, 0.5);
+    PAUSE_TXT->size = v2f(0.5, 0.5);
     sfSprite_setScale(PAUSE_TXT->sprite, PAUSE_TXT->size);
-    PAUSE_CADRE->size = V2F(0.5, 0.7);
+    PAUSE_CADRE->size = v2f(0.5, 0.7);
     sfSprite_setScale(PAUSE_CADRE->sprite, PAUSE_CADRE->size);
     load_button_menu_pause(all);
 }

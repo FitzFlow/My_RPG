@@ -56,15 +56,15 @@ void back_interaction(all_t *all)
 void animate_player1(all_t *all)
 {
     if (is_on_sprite(PLAYER_CHOICE_BOY->sprite, WINDOW)) {
-        PLAYER_CHOICE_BOY->size = V2F(2.20, 2.20);
+        PLAYER_CHOICE_BOY->size = v2f(2.20, 2.20);
         sfSprite_setScale(PLAYER_CHOICE_BOY->sprite,
         PLAYER_CHOICE_BOY->size);
-        sfSprite_setPosition(PLAYER_CHOICE_BOY->sprite, V2F(430, 295));
+        sfSprite_setPosition(PLAYER_CHOICE_BOY->sprite, v2f(430, 295));
     } else {
-        PLAYER_CHOICE_BOY->size = V2F(2, 2);
+        PLAYER_CHOICE_BOY->size = v2f(2, 2);
         sfSprite_setScale(PLAYER_CHOICE_BOY->sprite,
         PLAYER_CHOICE_BOY->size);
-        sfSprite_setPosition(PLAYER_CHOICE_BOY->sprite, V2F(435, 300));
+        sfSprite_setPosition(PLAYER_CHOICE_BOY->sprite, v2f(435, 300));
     }
 }
 
