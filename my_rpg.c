@@ -29,13 +29,12 @@ void game_loop(void)
     all_t *all = load_all_struct();
     dialog_t *dialog = init_dialog("./src/dialog/dialog_masculin.txt");
 
-    sfRenderWindow_setFramerateLimit(WINDOW, 60);
     init_pnj_and_npc(all, dialog);
+    change_view_pnj(all);
     while (sfRenderWindow_isOpen(WINDOW)) {
         sfRenderWindow_clear(WINDOW, sfBlack);
         init_view(all);
         event(all);
-        change_view_pnj(all);
         all_animation(all);
         draw_all(all);
         change_player_dress(all);

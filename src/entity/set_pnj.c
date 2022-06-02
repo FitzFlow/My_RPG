@@ -38,7 +38,7 @@ void set_dialog(mob_t *npc, dialog_t *dialog)
     char *id[] = {"John WAIT", "Big SMOKE", "Freeze CORLEONE", NULL};
     char *path[] = {"assets/npc/john_wait.png", "assets/npc/didier.png",
     "assets/npc/freeze.png", NULL};
-    sfVector2f spawn[] = {V2F(2010, 1140), V2F(1950, 2650), V2F(855, 1960)};
+    sfVector2f spawn[] = {v2f(2010, 1140), v2f(1950, 2650), v2f(855, 1960)};
     int i = 0;
 
     for (mob_t *mob = npc; mob; mob = mob->next) {

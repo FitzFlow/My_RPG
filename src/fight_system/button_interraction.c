@@ -37,7 +37,7 @@ void interact_with_button(all_t *all)
         if (is_on_sprite(FIGHT->fight_system->run_button->sprite, WINDOW) &&
         CLICKR && MOUSE(sfMouseLeft) &&
         FIGHT->choose_option == not_in_selection) {
-            set_player_pos(all->player->sprite, V2F(2520, 425));
+            set_player_pos(all->player->sprite, v2f(2520, 425));
             FIGHT->fight1 = not_in_fight;
         }
         if (is_on_sprite(FIGHT->fight_system->attack_button->sprite, WINDOW) &&

@@ -15,7 +15,7 @@ void zoom_mini_map(all_t *all)
     if (sfEvtMouseWheelScrolled) {
         delta = all->window->event.mouseWheelScroll.delta;
         size = sfView_getSize(all->view_game);
-        new = V2F(size.x + (delta * 10), size.y + (delta * 10));
+        new = v2f(size.x + (delta * 10), size.y + (delta * 10));
         sfView_setSize(all->view_game, new);
     }
 }

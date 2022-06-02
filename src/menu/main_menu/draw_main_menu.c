@@ -13,7 +13,7 @@ void draw_button(all_t *all)
     NEW_GAME_BTN->sprite, NULL);
     draw_sprite(WINDOW,
     CONTINUE_BTN->sprite, NULL);
-    sfSprite_setPosition(BACK_BTN->sprite, V2F(490, 599));
+    sfSprite_setPosition(BACK_BTN->sprite, v2f(490, 599));
     draw_sprite(WINDOW,
     QUIT_BTN->sprite, NULL);
 }
@@ -51,21 +51,18 @@ int left)
 
 void draw_main_menu(all_t *all)
 {
-    if (FIGHT->fight1 == in_fight)
+    if (FIGHT->fight1 == in_fight || STATE_OF_GAME != main_menu)
         return;
-    if (STATE_OF_GAME == main_menu) {
-        move_menu_parallax(CLOUD_S, CLOUD->texture, &CLOUD->rect, 1);
-        move_menu_parallax(CITY1_S, CITY1->texture, &CITY1->rect, (int)1.75);
-        move_menu_parallax(CITY2_S, CITY2->texture, &CITY2->rect, 2);
-        move_menu_parallax(CITY3_S, CITY3->texture, &CITY3->rect, 3);
-        move_menu_parallax(CITY4_S, CITY4->texture, &CITY4->rect, 4);
-        move_menu_parallax(CREATOR_S, CREATOR->texture, &CREATOR->rect, 1);
-        resize_draw(all);
-        if (SELECT_PLAYER == none)
-            draw_sprite(WINDOW, all->menu->key->sprite, NULL);
-    }
-    if (STATE_OF_GAME == main_menu && SELECT_PLAYER != selection &&
-    SELECT_PLAYER != tuto) {
+    move_menu_parallax(CLOUD_S, CLOUD->texture, &CLOUD->rect, 1);
+    move_menu_parallax(CITY1_S, CITY1->texture, &CITY1->rect, (int)1.75);
+    move_menu_parallax(CITY2_S, CITY2->texture, &CITY2->rect, 2);
+    move_menu_parallax(CITY3_S, CITY3->texture, &CITY3->rect, 3);
+    move_menu_parallax(CITY4_S, CITY4->texture, &CITY4->rect, 4);
+    move_menu_parallax(CREATOR_S, CREATOR->texture, &CREATOR->rect, 1);
+    resize_draw(all);
+    if (SELECT_PLAYER == none)
+        draw_sprite(WINDOW, all->menu->key->sprite, NULL);
+    if (SELECT_PLAYER != selection && SELECT_PLAYER != tuto) {
         draw_button(all);
         animate_menu_btn(all);
     }

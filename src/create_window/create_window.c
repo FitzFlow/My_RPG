@@ -13,5 +13,6 @@ window_t *init_window(void)
     window->mode = (sfVideoMode){1280, 720, 64};
     window->window =
     sfRenderWindow_create(window->mode, "My_rpg", sfClose, NULL);
+    sfRenderWindow_setFramerateLimit(window->window, 60);
     return (window);
 }

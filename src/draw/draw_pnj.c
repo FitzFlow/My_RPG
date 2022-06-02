@@ -23,7 +23,7 @@ void draw_pnj_front(all_t *all)
 sfVector2f get_pos_dialog(all_t *all, sfText *text)
 {
     if (!text)
-        return V2F(0, 0);
+        return v2f(0, 0);
     sfVector2f center = sfView_getCenter(all->view_player1);
     char const *str = sfText_getString(text);
 
@@ -31,7 +31,7 @@ sfVector2f get_pos_dialog(all_t *all, sfText *text)
     center.x -= (my_strlen(str) * 2.5);
     if (!all->INTERACT_E_S)
         return center;
-    sfSprite_setPosition(all->INTERACT_E_S, V2F(center.x - 30, center.y));
+    sfSprite_setPosition(all->INTERACT_E_S, v2f(center.x - 30, center.y));
     return center;
 }
 
@@ -47,14 +47,5 @@ void draw_my_npc(all_t *all, mob_t *pnj)
         draw_sprite(WINDOW, all->INTERACT_E_S, NULL) : 0;
         draw_text(WINDOW, TEXT, NULL);
         draw_text(WINDOW, ID_TEXT, NULL);
-    }
-}
-
-void draw_npc(all_t *all)
-{
-    for (mob_t *pnj = all->npc; pnj; pnj = pnj->next) {
-        if (my_strcmp(pnj->id, "Big SMOKE") &&
-        my_strcmp(pnj->id, "Freeze CORLEONE"))
-            draw_my_npc(all, pnj);
     }
 }
