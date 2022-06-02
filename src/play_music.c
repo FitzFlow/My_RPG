@@ -13,4 +13,5 @@ void play_music(all_t *all)
         return;
     sfMusic_play(all->menu_music.music);
     sfMusic_setLoop(all->menu_music.music, sfTrue);
+    sfMusic_pause(all->menu_music.music);
 }
