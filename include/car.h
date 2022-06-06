@@ -7,7 +7,7 @@
 
 #ifndef CAR_H_
     #define CAR_H_
-    #include "all.h"
+    #include "entity.h"
 
 entity_t **tab_of_car(int nb_car, int *x, int *y);
 int choose_path(void);

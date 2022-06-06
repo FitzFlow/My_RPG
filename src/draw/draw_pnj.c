@@ -35,17 +35,17 @@ sfVector2f get_pos_dialog(all_t *all, sfText *text)
     return center;
 }
 
-void draw_my_npc(all_t *all, mob_t *pnj)
+void draw_my_npc(all_t *all, npc_t *pnj)
 {
     if (!GET_POS_S(PNJ_S).x && !GET_POS_S(PNJ_S).y)
         return;
     draw_sprite(WINDOW, PNJ_S, NULL);
-    if (dist_btw_sprite(PNJ_S, PLAYER_S) <= DIST_INTERACTION) {
-        (ID_TEXT) ? sfText_setPosition(ID_TEXT, GET_POS_S(PNJ_S)) : 0;
-        (TEXT) ? sfText_setPosition(TEXT, get_pos_dialog(all, TEXT)) : 0;
-        (TEXT && my_strcmp(sfText_getString(TEXT), "/")) ?
-        draw_sprite(WINDOW, all->INTERACT_E_S, NULL) : 0;
-        draw_text(WINDOW, TEXT, NULL);
-        draw_text(WINDOW, ID_TEXT, NULL);
-    }
+    // if (dist_btw_sprite(PNJ_S, PLAYER_S) <= DIST_INTERACTION) {
+    //     (ID_TEXT) ? sfText_setPosition(ID_TEXT, GET_POS_S(PNJ_S)) : 0;
+    //     (TEXT) ? sfText_setPosition(TEXT, get_pos_dialog(all, TEXT)) : 0;
+    //     (TEXT && my_strcmp(sfText_getString(TEXT), "/")) ?
+    //     draw_sprite(WINDOW, all->INTERACT_E_S, NULL) : 0;
+    //     draw_text(WINDOW, TEXT, NULL);
+    //     draw_text(WINDOW, ID_TEXT, NULL);
+    // }
 }

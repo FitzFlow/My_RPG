@@ -6,17 +6,17 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun  2 11:00:39 2022
+# Make data base, printed on Mon Jun  6 09:19:24 2022
 
 # Variables
 
-# makefile (from 'Makefile', line 118)
+# makefile (from 'Makefile', line 117)
 OBJ = $(SRC:.c=.o)
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 101)
+# makefile (from 'Makefile', line 100)
 SRC = $(LOAD) $(DRAW) $(OTHER) $(PLAYER) $(ENTITY) $(DIALOG) $(ALL_EVENT) $(MAIN_MENU) $(CREATE_WINDOW) $(PHONE_ANIMATION) $(CREATE_STRUCTURE) $(MISSION) $(FIGHT) $(ASSETS)
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
@@ -25,9 +25,9 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a14db9dc-11d0-4b15-b594-8b3326eb1c8b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-bdd6ee39-b568-43b0-a17d-56fcd69f67e8.sock
 # environment
-VSCODE_CWD = /home/x/delivery/My_RPG
+VSCODE_CWD = /home/x
 # default
 MAKE_COMMAND := make
 # makefile (from 'Makefile', line 54)
@@ -53,7 +53,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 XDG_DATA_DIRS = /usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/x/delivery
+OLDPWD = /home/x
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -65,18 +65,18 @@ VSCODE_CODE_CACHE_PATH = /home/x/.config/Code/CachedData/c3511e6c69bb39013c4a4b7
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.NVLAN1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.AMU5M1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.132
+GNOME_TERMINAL_SERVICE = :1.111
 # makefile
 MAKEFLAGS = pqrR
-# makefile (from 'Makefile', line 99)
+# makefile (from 'Makefile', line 98)
 ASSETS = src/game_assets/init_game_assets.c
-# makefile (from 'Makefile', line 93)
+# makefile (from 'Makefile', line 92)
 FIGHT = src/fight_system/init_fight_scene.c src/fight_system/fight_system.c src/fight_system/fight_system2.c src/fight_system/fight_system3.c src/fight_system/button_interraction.c
 # makefile
 CURDIR := /home/x/delivery/My_RPG
@@ -84,11 +84,11 @@ CURDIR := /home/x/delivery/My_RPG
 VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
-# makefile (from 'Makefile', line 124)
+# makefile (from 'Makefile', line 123)
 IFLAGS = -I include/
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# makefile (from 'Makefile', line 88)
+# makefile (from 'Makefile', line 87)
 MISSION = src/mission/mission_1/mission1.c src/mission/mission_2/mission2.c src/mission/mission_3/mission3.c src/mission/mission_4/mission4.c
 # environment
 MFLAGS = -pqrR
@@ -113,13 +113,13 @@ ZSH = /home/x/.oh-my-zsh
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 7548
+VSCODE_PID = 5784
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/x:@/tmp/.ICE-unix/1821,unix/x:/tmp/.ICE-unix/1821
+SESSION_MANAGER = local/x:@/tmp/.ICE-unix/2365,unix/x:/tmp/.ICE-unix/2365
 # automatic
 *F = $(notdir $*)
 # makefile (from 'Makefile', line 45)
@@ -147,7 +147,7 @@ SHLVL = 1
 # makefile (from 'Makefile', line 18)
 DRAW = src/draw/draw.c src/draw/draw_text.c src/draw/draw_all.c src/draw/draw_car.c src/draw/draw_map.c src/draw/draw_pnj.c src/draw/draw_pause.c src/draw/draw_phone.c src/draw/draw_interior_house.c
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/32cca4dd_3028_406e_9ce8_5ad2e9ad1574
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/4e2f329d_45a4_4cb8_9eb5_4279dcb07132
 # environment
 MAKELEVEL := 0
 # default
@@ -166,7 +166,7 @@ SNAP_USER_COMMON = /home/x/snap/code/common
 SNAP = /snap/code/97
 # makefile (from 'Makefile', line 30)
 ALL_EVENT = src/all_event/movement.c src/all_event/movement2.c src/all_event/movement3.c src/all_event/get_event.c src/all_event/window_event.c src/all_event/zoom_mini_map.c src/all_event/animation_camera.c src/all_event/set_game_in_pause.c
-# makefile (from 'Makefile', line 116)
+# makefile (from 'Makefile', line 115)
 MAIN = my_rpg.c
 # environment
 SNAP_REVISION = 97
@@ -177,14 +177,14 @@ VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = x
 # environment
-GNOME_SETUP_DISPLAY = :1
+GNOME_SETUP_DISPLAY = :2
 # makefile (from 'Makefile', line 8)
 LOAD = src/load/load_game.c src/load/load_menu.c src/load/load_phone.c src/load/load_filter.c src/load/load_pause_menu.c src/load/load_player_menu.c src/interior/init_interior.c src/interior/enter_in_house.c src/interior/enter_in_house2.c 
 # automatic
 ?F = $(notdir $?)
 # makefile (from 'Makefile', line 28)
 PHONE_ANIMATION = src/phone_animation/phone_animation.c
-# makefile (from 'Makefile', line 122)
+# makefile (from 'Makefile', line 121)
 NAME = my_rpg
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -207,15 +207,15 @@ LOGNAME = x
 # makefile (from 'Makefile', line 58)
 ENTITY = src/entity/set_pnj.c src/entity/init_pnj.c src/entity/move_npc.c src/entity/spawn_pnj.c src/entity/anime_npc.c src/entity/create_clock.c src/move_car/create_car.c src/move_car/create_car2.c src/move_car/create_car3.c src/move_car/create_car4.c
 # makefile (from 'Makefile', line 85)
-DIALOG = src/dialog/init_dialog.c src/dialog/load_font.c
+DIALOG = src/dialog/init_npc.c
 # environment
 SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 2039
+SYSTEMD_EXEC_PID = 2578
 # environment
-DISPLAY = :0
+DISPLAY = :1
 # environment
 USER = x
 # environment
@@ -232,7 +232,7 @@ SNAP_CONTEXT = urS7OkYHPiUwHOjkyJtJ9a-wgf11lfRFQcKYx6y59UxxL_GoXRYl
 PAGER = less
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
-# makefile (from 'Makefile', line 125)
+# makefile (from 'Makefile', line 124)
 CFLAGS = -W -Wall -Werror -Wextra -g $(IFLAGS)
 # environment
 COLORTERM = truecolor
@@ -248,7 +248,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 HOME = /home/x
 # environment
 QT_IM_MODULE = ibus
-# makefile (from 'Makefile', line 127)
+# makefile (from 'Makefile', line 126)
 FLAGSCSFML = -lcsfml-graphics -lcsfml-system -lcsfml-audio -lcsfml-window
 # environment
 ELECTRON_RUN_AS_NODE = 1
@@ -266,7 +266,7 @@ GSETTINGS_SCHEMA_DIR = /snap/code/97/usr/share/glib-2.0/schemas
 <F = $(notdir $<)
 # environment
 SNAP_VERSION = c3511e6c
-# makefile (from 'Makefile', line 120)
+# makefile (from 'Makefile', line 119)
 M_OBJ = $(MAIN:.c=.o)
 # default
 SUFFIXES := 
@@ -280,8 +280,9 @@ VTE_VERSION = 6800
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 126)
+# makefile (from 'Makefile', line 125)
 LFLAGS = -L lib/my/ -lmy -lm
+ 
 # environment
 SNAP_USER_DATA = /home/x/snap/code/97
 # environment
@@ -289,12 +290,11 @@ XDG_MENU_PREFIX = gnome-
 # makefile (from 'Makefile', line 39)
 CREATE_STRUCTURE = src/create_structure/create_music.c src/create_structure/create_sprite.c
 # environment
- 
 GDMSESSION = ubuntu-wayland
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=141/1024=14%, Rehash=0, Collisions=16/191=8%
+# Load=141/1024=14%, Rehash=0, Collisions=16/194=8%
 
 # Pattern-specific Variable Values
 
@@ -302,9 +302,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 66309, inode 4863995): 13 files, no impossibilities.
+# . (device 66309, inode 4863995): 14 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -314,226 +314,196 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Not a target:
 src/player/init_player.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.180863791
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/dialog/init_npc.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/animate_hud_button.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.496927875
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/move_car/create_car3.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.70488927
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/mission/mission_3/mission3.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.86494584
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_all.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.232817845
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/load/load_game.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:22.756794838
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_interior_house.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.46482908
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/fight_system/fight_system2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:26.024953654
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/entity/init_pnj.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.408874878
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/entity/create_clock.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.556882074
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/select_player_menu.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.456925923
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/interact_button.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.380922213
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_event/get_event.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.004903858
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/fight_system/fight_system3.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:26.064955614
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/load/load_player_menu.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:22.996806416
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/interior/enter_in_house.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.080810483
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_text.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.824846516
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/player/change_player_dress.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.288869042
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/is_on_sprite.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.988854458
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/destroy_cis.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.580834698
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:06.804050435
+#  Last modified 2022-06-04 09:08:11.02139053
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/all_event/set_game_in_pause.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.200913426
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_structure/create_sprite.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.716938615
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/load/load_pause_menu.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:22.956804486
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_event/movement.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.844896078
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/mission/mission_1/mission1.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.760940763
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_event/zoom_mini_map.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.088907959
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_pnj.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.348823462
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/dialog/init_dialog.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.78489316
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/mission/mission_2/mission2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.824943887
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_event/movement2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.892898412
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 136):
+#  recipe to execute (from 'Makefile', line 137):
 	make -C ./lib/my clean
 	rm -f $(OBJ)
 	rm -f $(M_OBJ)
@@ -541,45 +511,39 @@ clean:
 
 # Not a target:
 src/load/load_menu.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:22.804797154
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_struct.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.736842253
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 my_rpg.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:26.184961495
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/interior/enter_in_house2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.116812227
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.15281397
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/entity/anime_npc.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.524880518
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 re: fclean all
 #  Implicit rule search has not been done.
@@ -588,53 +552,47 @@ re: fclean all
 
 # Not a target:
 src/all_event/window_event.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.048906006
-#  File has been updated.
- 
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_text.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.188815714
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
+ 
 # Not a target:
 src/move_car/create_car.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.608884602
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/draw_main_menu.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.296918112
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/move_car/create_car4.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.744891215
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 val:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 142):
+#  recipe to execute (from 'Makefile', line 143):
 	gcc -o $(NAME) $(CFLAGS) $(IFLAGS) $(SRC) $(LFLAGS) -g -g3
 
 # Not a target:
 src/phone_animation/phone_animation.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.6449351
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -644,309 +602,298 @@ src/phone_animation/phone_animation.o:
 
 # Not a target:
 src/collision.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.624836829
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/destroy_bis.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.540832761
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-all: my_rpg
+all: loadlib my_rpg
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 
 fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 145):
+#  recipe to execute (from 'Makefile', line 146):
 	make -C ./lib/my fclean
 	rm -f $(NAME)
 
 # Not a target:
 src/all_struct2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.77684419
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/play_music.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.664838766
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/move_car/create_car2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.656886936
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_window/print_usage.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.56893139
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/get_pnj_in_the_list.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.132861458
-#  File has been updated.
-#  Successfully updated.
-
-my_rpg: src/load/load_game.o src/load/load_menu.o src/load/load_phone.o src/load/load_filter.o src/load/load_pause_menu.o src/load/load_player_menu.o src/interior/init_interior.o src/interior/enter_in_house.o src/interior/enter_in_house2.o src/draw/draw.o src/draw/draw_text.o src/draw/draw_all.o src/draw/draw_car.o src/draw/draw_map.o src/draw/draw_pnj.o src/draw/draw_pause.o src/draw/draw_phone.o src/draw/draw_interior_house.o src/destroy.o src/destroy_bis.o src/destroy_cis.o src/collision.o src/play_music.o src/all_struct.o src/all_struct2.o src/create_text.o src/calcul_dist.o src/create_view.o src/is_on_sprite.o src/create_circle.o src/random_number.o src/get_file_in_array.o src/get_pnj_in_the_list.o src/player/init_player.o src/player/animation_player.o src/player/change_player_dress.o src/entity/set_pnj.o src/entity/init_pnj.o src/entity/move_npc.o src/entity/spawn_pnj.o src/entity/anime_npc.o src/entity/create_clock.o src/move_car/create_car.o src/move_car/create_car2.o src/move_car/create_car3.o src/move_car/create_car4.o src/dialog/init_dialog.o src/dialog/load_font.o src/all_event/movement.o src/all_event/movement2.o src/all_event/movement3.o src/all_event/get_event.o src/all_event/window_event.o src/all_event/zoom_mini_map.o src/all_event/animation_camera.o src/all_event/set_game_in_pause.o src/menu/main_menu/animate_button.o src/menu/main_menu/draw_main_menu.o src/menu/main_menu/draw_main_menu2.o src/menu/main_menu/interact_button.o src/menu/main_menu/interact_button2.o src/menu/main_menu/select_player_menu.o src/menu/main_menu/animate_hud_button.o src/menu/main_menu/interact_button/interact_pause_button.o src/create_window/print_usage.o src/create_window/create_window.o src/phone_animation/phone_animation.o src/create_structure/create_music.o src/create_structure/create_sprite.o src/mission/mission_1/mission1.o src/mission/mission_2/mission2.o src/mission/mission_3/mission3.o src/mission/mission_4/mission4.o src/fight_system/init_fight_scene.o src/fight_system/fight_system.o src/fight_system/fight_system2.o src/fight_system/fight_system3.o src/fight_system/button_interraction.o src/game_assets/init_game_assets.o my_rpg.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-02 11:00:28.165058775
-#  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'Makefile', line 132):
-	make -C ./lib/my
+#  Modification time never checked.
+#  File has not been updated.
+
+my_rpg: src/load/load_game.o src/load/load_menu.o src/load/load_phone.o src/load/load_filter.o src/load/load_pause_menu.o src/load/load_player_menu.o src/interior/init_interior.o src/interior/enter_in_house.o src/interior/enter_in_house2.o src/draw/draw.o src/draw/draw_text.o src/draw/draw_all.o src/draw/draw_car.o src/draw/draw_map.o src/draw/draw_pnj.o src/draw/draw_pause.o src/draw/draw_phone.o src/draw/draw_interior_house.o src/destroy.o src/destroy_bis.o src/destroy_cis.o src/collision.o src/play_music.o src/all_struct.o src/all_struct2.o src/create_text.o src/calcul_dist.o src/create_view.o src/is_on_sprite.o src/create_circle.o src/random_number.o src/get_file_in_array.o src/get_pnj_in_the_list.o src/player/init_player.o src/player/animation_player.o src/player/change_player_dress.o src/entity/set_pnj.o src/entity/init_pnj.o src/entity/move_npc.o src/entity/spawn_pnj.o src/entity/anime_npc.o src/entity/create_clock.o src/move_car/create_car.o src/move_car/create_car2.o src/move_car/create_car3.o src/move_car/create_car4.o src/dialog/init_npc.o src/all_event/movement.o src/all_event/movement2.o src/all_event/movement3.o src/all_event/get_event.o src/all_event/window_event.o src/all_event/zoom_mini_map.o src/all_event/animation_camera.o src/all_event/set_game_in_pause.o src/menu/main_menu/animate_button.o src/menu/main_menu/draw_main_menu.o src/menu/main_menu/draw_main_menu2.o src/menu/main_menu/interact_button.o src/menu/main_menu/interact_button2.o src/menu/main_menu/select_player_menu.o src/menu/main_menu/animate_hud_button.o src/menu/main_menu/interact_button/interact_pause_button.o src/create_window/print_usage.o src/create_window/create_window.o src/phone_animation/phone_animation.o src/create_structure/create_music.o src/create_structure/create_sprite.o src/mission/mission_1/mission1.o src/mission/mission_2/mission2.o src/mission/mission_3/mission3.o src/mission/mission_4/mission4.o src/fight_system/init_fight_scene.o src/fight_system/fight_system.o src/fight_system/fight_system2.o src/fight_system/fight_system3.o src/fight_system/button_interraction.o src/game_assets/init_game_assets.o my_rpg.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 131):
 	gcc -o $(NAME) $(IFLAGS) $(OBJ) $(M_OBJ) $(LFLAGS) $(FLAGSCSFML)
 
 # Not a target:
 src/get_file_in_array.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.092859512
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_phone.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.424827143
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/random_number.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.052857567
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/draw_main_menu2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.34092026
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/fight_system/fight_system.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.988951892
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/entity/spawn_pnj.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.488878768
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/mission/mission_4/mission4.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.904947792
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/destroy.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.500830824
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_view.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.93685194
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_structure/create_music.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.676936662
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/entity/move_npc.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.448876822
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/interact_button/interact_pause_button.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.532929632
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+loadlib:
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := loadlib
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
+#  recipe to execute (from 'Makefile', line 134):
+	make -C ./lib/my
 
 # Not a target:
 src/fight_system/button_interraction.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:26.104957574
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_map.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.308821525
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_event/animation_camera.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.124909715
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_window/create_window.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.604933148
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/load/load_filter.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:22.904801978
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/player/animation_player.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.23286632
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/entity/set_pnj.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.336871377
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/create_circle.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.012855622
-#  File has been updated.
-#  Successfully updated.
-
-# Not a target:
-src/dialog/load_font.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.804894132
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_pause.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.3888254
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/interior/init_interior.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.032808158
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/interact_button2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.41692397
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+ 
 
 # Not a target:
 src/fight_system/init_fight_scene.o:
-#  Implicit rule search has been done.
- 
-#  Last modified 2022-06-02 11:00:25.94894994
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/calcul_dist.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.876849034
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/load/load_phone.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:22.840798891
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/game_assets/init_game_assets.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:26.140959338
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/all_event/movement3.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:24.932900356
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/draw/draw_car.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:23.268819588
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 src/menu/main_menu/animate_button.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-06-02 11:00:25.25691616
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=11/185=6%
+# Load=89/1024=9%, Rehash=0, Collisions=10/187=5%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 101 / storage = 2314 B / avg = 22 B
-# current buf: size = 8162 B / used = 2314 B / count = 101 / avg = 22 B
+# strcache buffers: 1 (0) / strings = 102 / storage = 2307 B / avg = 22 B
+# current buf: size = 8162 B / used = 2307 B / count = 102 / avg = 22 B
 
-# strcache performance: lookups = 118 / hit rate = 14%
+# strcache performance: lookups = 122 / hit rate = 16%
 # hash-table stats:
-# Load=101/8192=1%, Rehash=0, Collisions=1/118=1%
-# Finished Make data base on Thu Jun  2 11:00:39 2022
+# Load=102/8192=1%, Rehash=0, Collisions=1/122=1%
+# Finished Make data base on Mon Jun  6 09:19:24 2022
 
  

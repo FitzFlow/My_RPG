@@ -168,7 +168,7 @@
     #define GET_PIXEL(img, x, y) sfImage_getPixel(img, x, y)
     #define v2f(x, y) (sfVector2f) {x, y}
 
-    #define PNJ_S pnj->pnj->sprite
+    #define PNJ_S pnj->entity->sprite
     #define PNJ_M all->pnj
     #define PNJ pnj->pnj
 

@@ -1,0 +1,9 @@
+Name:
+John WAIT
+Mission:
+1|2
+Text:
+Salut Bienvenue.\Je vois que tu a eu des ennuis\Retrouve-moi au parc\situe au nord-est de la ville !
+Bien joue\Tu a reussi mon test\Je vois que tu est du milieu\Rentre chez toi\Tu habites bien dans le centre\dans la maison orange avec le garage ?
+Va vite a la gare\Un train va derailler\un hacker pirate le system de rail
+Bien joue\Tu m'etonne de plus en plus\Je sais qui a fait ca\C'est Big Smoke\Il habite dans les cites vertes\dans le dernier batiment.

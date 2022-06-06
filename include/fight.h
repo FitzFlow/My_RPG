@@ -7,7 +7,10 @@
 
 #ifndef FIGHT_H_
     #define FIGHT_H_
-    #include "all.h"
+    #include "entity.h"
+    #include <SFML/Audio.h>
+    #include <SFML/Graphics.h>
+    #include <SFML/System.h>
 
 typedef struct fight_result {
     bool player_win;

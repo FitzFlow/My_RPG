@@ -7,15 +7,15 @@
 
 #include "rpg.h"
 
-mob_t *npc_closest_to_the_player(player_t *player, mob_t *npc)
+npc_t *npc_closest_to_the_player(player_t *player, npc_t **npc)
 {
-    mob_t *closest_pnj = npc;
-    int last_dist = dist_btw_sprite(npc->pnj->sprite, player->sprite);
+    npc_t *closest_pnj = npc[0];
+    int last_dist = dist_btw_sprite(npc[0]->entity->sprite, player->sprite);
 
-    for (mob_t *pnj = npc; pnj; pnj = pnj->next)
-        if (dist_btw_sprite(pnj->pnj->sprite, player->sprite) < last_dist) {
-            closest_pnj = pnj;
-            last_dist = dist_btw_sprite(pnj->pnj->sprite, player->sprite);
+    for (int i = 0; npc[i]; i++)
+        if (dist_btw_sprite(npc[i]->entity->sprite, player->sprite) < last_dist) {
+            closest_pnj = npc[i];
+            last_dist = dist_btw_sprite(npc[i]->entity->sprite, player->sprite);
         }
     if (last_dist > DIST_INTERACTION)
         return NULL;
@@ -24,14 +24,14 @@ mob_t *npc_closest_to_the_player(player_t *player, mob_t *npc)
 
 void interaction_npc(all_t *all)
 {
-    mob_t *npc = npc_closest_to_the_player(all->player, all->npc);
+    npc_t *npc = npc_closest_to_the_player(all->player, all->npc);
 
     if (!npc || !npc->dialog)
         return;
-    if (npc->i < my_arraylen(npc->dialog)) {
-        npc->i++;
-    } else
-        npc->i = 0;
+    // if (npc->i < my_arraylen(npc->dialog)) {
+    //     npc->i++;
+    // } else
+    //     npc->i = 0;
 }
 
 void pause_menu_event(all_t *all)

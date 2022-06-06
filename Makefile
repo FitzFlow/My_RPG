@@ -82,8 +82,7 @@ OTHER	=	src/destroy.c \
 			src/get_file_in_array.c \
 			src/get_pnj_in_the_list.c
 
-DIALOG	=	src/dialog/init_dialog.c \
-			src/dialog/load_font.c
+DIALOG	=	src/dialog/init_npc.c
 
 MISSION =   src/mission/mission_1/mission1.c \
 			src/mission/mission_2/mission2.c \
@@ -126,11 +125,13 @@ CFLAGS = -W -Wall -Werror -Wextra -g $(IFLAGS)
 LFLAGS = -L lib/my/ -lmy -lm
 FLAGSCSFML = -lcsfml-graphics -lcsfml-system -lcsfml-audio -lcsfml-window
 
-all: $(NAME)
+all: loadlib $(NAME)
 
 $(NAME): $(OBJ) $(M_OBJ)
-	make -C ./lib/my
 	gcc -o $(NAME) $(IFLAGS) $(OBJ) $(M_OBJ) $(LFLAGS) $(FLAGSCSFML)
+
+loadlib:
+	make -C ./lib/my
 
 clean:
 	make -C ./lib/my clean
