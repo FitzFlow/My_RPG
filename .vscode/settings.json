@@ -1,3 +1,20 @@
 {
-    "makefile.extensionOutputFolder": "./.vscode"
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "dialog.h": "c",
+        "npc.h": "c",
+        "all.h": "c",
+        "my.h": "c",
+        "game.h": "c",
+        "types.h": "c",
+        "pnj.h": "c",
+        "entity.h": "c",
+        "menu_selection.h": "c",
+        "rpg.h": "c",
+        "string.h": "c",
+        "mission.h": "c",
+        "define.h": "c",
+        "graphics.h": "c",
+        "camera_animation.C": "cpp"
+    }
 }

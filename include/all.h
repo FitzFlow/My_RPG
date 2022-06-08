@@ -15,7 +15,6 @@
     #include <sys/types.h>
     #include <fcntl.h>
     #include "rpg.h"
-    #include "dialog.h"
     #include "pnj.h"
     #include "entity.h"
     #include "menu_selection.h"

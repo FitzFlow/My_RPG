@@ -7,7 +7,7 @@
 
 #ifndef PNJ_H_
     #define PNJ_H_
-    #include "dialog.h"
+    #include "entity.h"
 
 typedef struct clock {
     sfClock *clock;
@@ -47,13 +47,13 @@ typedef struct mob
 mob_t *init_pnj(int nb_pnj);
 my_clock_t *create_clock(void);
 
-void add_dialog_npc(dialog_t **src, dialog_t *pt, dialog_t **dest);
-
 void move_to_another_list(mob_t **src, mob_t *pt, mob_t **dest);
+
+void destroy_mob(mob_t *mob);
 
 int dist_btw_sprite(sfSprite *sprite1, sfSprite *sprite2);
 int dist_btw_sprite_and_point(sfSprite *e1, sfVector2f pos);
 
-mob_t *get_pnj_in_the_list(mob_t *list, char *target);
+npc_t *get_pnj_in_the_list(npc_t **list, char *target);
 
 #endif /* !PNJ_H_ */

@@ -33,27 +33,27 @@ void draw_lean_bottle(all_t *all)
     }
 }
 
-static int interaction(all_t *all, mob_t *pnj, mission_enum_t mission, int i)
+static int interaction(all_t *all, npc_t *pnj, mission_enum_t mission, int i)
 {
     if (KEY_RELEASE && KEY(sfKeyE) && MISSION4 == mission &&
-    dist_btw_sprite(PLAYER_S, pnj->pnj->sprite) <= DIST_INTERACTION &&
+    dist_btw_sprite(PLAYER_S, pnj->entity->sprite) <= DIST_INTERACTION &&
     pnj->i == i) {
         return 1;
     }
     return 0;
 }
 
-void mission_4(all_t *all, mob_t *freeze)
+void mission_4(all_t *all, npc_t *freeze)
 {
     if (MISSION3 != finish)
         return;
     draw_my_npc(all, freeze);
     if (interaction(all, freeze, m_none, 8)) {
-        sfSprite_setPosition(freeze->pnj->sprite, v2f(855, 1960));
+        sfSprite_setPosition(freeze->entity->sprite, v2f(855, 1960));
         MISSION4 = start;
     }
     if (KEY(sfKeyT) && MISSION4 == start) {
-        (my_arraylen(freeze->dialog) >= 9) ? freeze->i = 9 : 0;
+        // (my_arraylen(freeze->dialog) >= 9) ? freeze->i = 9 : 0;
         MISSION4 = end_figth;
     }
     if (MISSION4 == end_figth && interaction(all, freeze, end_figth, 12)) {

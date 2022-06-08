@@ -36,5 +36,5 @@ void spawn_pnj(all_t *all)
     mob_t *pnj = all->pnj;
 
     for (; pnj; pnj = pnj->next)
-        sfSprite_setPosition(PNJ_S, get_coord_spawn(all));
+        sfSprite_setPosition(pnj->pnj->sprite, get_coord_spawn(all));
 }

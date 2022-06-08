@@ -7,32 +7,21 @@
 
 #ifndef MISSION_H_
     #define MISSION_H_
-    #include "all.h"
+    #include <SFML/Graphics.h>
 
-typedef enum mission_enum{
+typedef enum mission_enum_e{
     m_none,
-    animation_mission,
-    start,
-    loading,
-    waite,
-    dialog,
-    end_figth,
-    finish
-} mission_enum_t;
-
-typedef enum mission_game_5 {
-    mission_5_not_start,
-    mission_5_loading,
-    mission_5_finish
-} mission_game_5_t;
+    m_animation,
+    m_wait_fight,
+    m_fight_win,
+    m_end_speak,
+    m_finish,
+} mission_e;
 
 typedef struct mission {
     sfCircleShape *circle_mission;
-    mission_enum_t mission1;
-    mission_enum_t mission2;
-    mission_enum_t mission3;
-    mission_enum_t mission4;
-    mission_game_5_t mission5;
+    mission_e mission;
+    int current_mission;
 } mission_t;
 
 #endif /* !MISSION_H_ */

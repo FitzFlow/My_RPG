@@ -6,10 +6,10 @@
 */
 #include "rpg.h"
 
-mob_t *get_pnj_in_the_list(mob_t *list, char *target)
+npc_t *get_pnj_in_the_list(npc_t **list, char *target)
 {
-    for (mob_t *pnj = list; pnj; pnj = pnj->next)
-        if (!my_strcmp(pnj->id, target))
-            return pnj;
+    for (int i = 0; list[i]; i++)
+        if (!my_strcmp(list[i]->id, target))
+            return list[i];
     return NULL;
 }

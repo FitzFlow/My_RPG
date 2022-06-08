@@ -26,8 +26,8 @@ char *my_load_file(char *pathfile)
     len = sb.st_size;
     if (!len)
         return NULL;
-    buffer = malloc(sizeof(char) * len);
+    buffer = malloc(sizeof(char) * (len + 1));
     read(fd, buffer, len);
-    buffer[len - 1] = '\0';
+    buffer[len] = '\0';
     return buffer;
 }

@@ -18,8 +18,6 @@ void all_animation(all_t *all)
 
 void change_view_pnj(all_t *all)
 {
-    for (mob_t *npc = all->npc; npc; npc = npc->next)
-        check_colision(GET_POS_S(npc->pnj->sprite), FILTER, &npc->view);
     for (mob_t *npc = all->pnj; npc; npc = npc->next)
         check_colision(GET_POS_S(npc->pnj->sprite), FILTER, &npc->view);
 }
@@ -27,9 +25,8 @@ void change_view_pnj(all_t *all)
 void game_loop(void)
 {
     all_t *all = load_all_struct();
-    dialog_t *dialog = init_dialog("./src/dialog/dialog_masculin.txt");
 
-    init_pnj_and_npc(all, dialog);
+    init_pnj_and_npc(all);
     change_view_pnj(all);
     while (sfRenderWindow_isOpen(WINDOW)) {
         sfRenderWindow_clear(WINDOW, sfBlack);

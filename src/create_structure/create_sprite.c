@@ -16,6 +16,7 @@ sfIntRect *rect)
     sprite->size = (sfVector2f){1, 1};
     sfSprite_setTexture(sprite->sprite, sprite->texture, sfTrue);
     sfSprite_setScale(sprite->sprite, sprite->size);
+    sprite->height = sfTexture_getSize(sprite->texture).x;
     if (position == NULL) {
         sprite->position = (sfVector2f){0, 0};
         sfSprite_setPosition(sprite->sprite, sprite->position);
@@ -23,6 +24,7 @@ sfIntRect *rect)
         sfSprite_setPosition(sprite->sprite, *position);
     if (rect != NULL) {
         sprite->rect = *rect;
+        sprite->left_begin = rect->left;
         sfSprite_setTextureRect(sprite->sprite, sprite->rect);
     }
     return (sprite);

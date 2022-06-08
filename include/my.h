@@ -110,6 +110,7 @@ char *my_getline(char *str);
 char *my_load_file(char *pathfile);
 char **my_load_2d_file(char *pathfile);
 
+char ***add_tab(char ***dest, char **array);
 void free_array(char **array);
 
 char **replace_line_in_array(char **array, char *str, int index);
@@ -125,7 +126,10 @@ char *rm_char_in_str(char *str, char c);
 char *rm_tab_in_str(char *str);
 void print_tab_char(char **tab);
 
-//à reparer
+int open_file(char *path);
+FILE *fopen_file(char *path);
+char **get_file_in_folder(char *path_file);
+
 int my_showstr(char *str);
 int my_showmem(char const *str, int size);
 #endif /* !LIBMY_H_ */

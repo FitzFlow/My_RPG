@@ -33,7 +33,7 @@ void destroy_all(all_t *all)
     destroy_menu(all->menu);
     destroy_my_music(all->menu_music);
     destroy_menu_pause(all->menu_pause);
-    destroy_mob(all->npc);
+    // destroy_mob(all->npc);
     destroy_phone(all->phone);
     destroy_select_player(all->select_player);
     sfView_destroy(all->view_player1);

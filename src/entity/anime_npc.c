@@ -6,17 +6,17 @@
 */
 #include "rpg.h"
 
-void anim_all_npc(sfSprite *sprite, all_t *all, int direction)
+void anim_all_npc(npc_t *npc, all_t *all, int direction)
 {
     sfTime time = sfClock_getElapsedTime(all->timer);
-    sfIntRect rect = sfSprite_getTextureRect(sprite);
+    sfIntRect rect = sfSprite_getTextureRect(npc->entity->sprite);
     rect.top = direction;
 
     if (time.microseconds > 100000.0) {
         rect.left = rect.left + 57;
-        if (rect.left == 228)
-            rect.left = 0;
-        sfSprite_setTextureRect(sprite, rect);
+        if (rect.left >= npc->entity->height)
+            rect.left = npc->entity->left_begin;
+        sfSprite_setTextureRect(npc->entity->sprite, rect);
         sfClock_restart(all->timer);
     }
 }
