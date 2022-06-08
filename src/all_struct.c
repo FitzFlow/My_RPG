@@ -18,8 +18,8 @@ void load_car(all_t *all)
 void init_mission(all_t *all)
 {
     all->mission = malloc(sizeof(*all->mission));
-    MISSION = m_finish;
-    CURRENT_MISSION = 3;
+    MISSION = m_none;
+    CURRENT_MISSION = 1;
     CIRCLE_M = create_circle(v2f(2570, 440), 15, sfYellow);
 }
 
