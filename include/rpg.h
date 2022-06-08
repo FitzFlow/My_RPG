@@ -163,6 +163,9 @@ void mission_4(all_t *all, npc_t *freeze);
 void mission_5(all_t *all);
 void draw_lean_bottle(all_t *all);
 void get_lean_bottle(all_t *all);
+void start_mission(all_t *all, npc_t *npc,
+sfVector2f sens_cam, sfVector2f sens_npc, int direction);
+void end_mission(all_t *all, npc_t *npc, sfVector2f pos);
 void fight(all_t *all, npc_t *npc, mission_e *ptr_mission);
 void mission_camera_animation(int dist, all_t *all, sfVector2f dest,
 sfVector2f sens);

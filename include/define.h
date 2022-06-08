@@ -138,6 +138,7 @@
     #define SELECT_PLAYER_G "assets/main_menu/perso.png"
     #define GET_RECT(sprite) sfSprite_getTextureRect(sprite)
     #define GET_POS_S(sprite) sfSprite_getPosition(sprite)
+    #define SET_POS_S(sprite, x_y) sfSprite_setPosition(sprite, x_y)
     #define PLAYER_S all->player->sprite
 
     #define TEXT pnj->text

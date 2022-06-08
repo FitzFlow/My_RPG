@@ -1,7 +1,0 @@
-Name:
-Freeze CORLEONE
-Mission:
-4
-Text:
-Yo l'EKIP\J'suis grave dans la sauce\J'ai consommer plus d'essence\que ce que la station peut m offrire\Aide moi a retrouver mes bouteilles\de lin.\Ils sont vers les entrepots\en-bas de chez toi
-Bien joue\Je te revaudrais ca.\EKIP

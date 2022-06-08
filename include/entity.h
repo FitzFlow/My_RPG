@@ -41,5 +41,4 @@ typedef struct npc {
 npc_t *init_dialog(char *filepath);
 sfText *create_text(char *txt, int size, sfFont *font, sfColor color);
 
-
 #endif /* !ENTITY_H_ */

@@ -28,9 +28,10 @@ void interaction_npc(all_t *all)
 
     if (!npc || !npc->dialog)
         return;
-    if ((*npc->dialog)[npc->i]) {
+    if (*npc->dialog && (*npc->dialog)[npc->i]) {
         npc->i++;
-        npc->text = create_text((*npc->dialog)[npc->i], 15, FONT, sfBlack);
+        if ((*npc->dialog)[npc->i])
+            npc->text = create_text((*npc->dialog)[npc->i], 15, FONT, sfWhite);
     }
 }
 

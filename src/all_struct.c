@@ -18,8 +18,8 @@ void load_car(all_t *all)
 void init_mission(all_t *all)
 {
     all->mission = malloc(sizeof(*all->mission));
-    MISSION = m_none;
-    CURRENT_MISSION = 1;
+    MISSION = m_finish;
+    CURRENT_MISSION = 3;
     CIRCLE_M = create_circle(v2f(2570, 440), 15, sfYellow);
 }
 
@@ -76,5 +76,6 @@ all_t *load_all_struct(void)
     init_mission(all);
     PHONE_MODE = not_in_phone;
     load_all_pt2(all);
+    FIGHT->choose_option = not_in_selection;
     return (all);
 }
