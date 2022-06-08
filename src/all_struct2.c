@@ -23,10 +23,10 @@ void load_fight(all_t *all)
 void load_assets(all_t *all)
 {
     int lean_coord[4][2] = {
-        {1797, 690},
-        {1797, 732},
-        {1797, 780},
-        {1797, 807}
+        {2240, 1495},
+        {2080, 1490},
+        {1865, 1400},
+        {1735, 1280}
     };
     all->lean = array_of_lean(4, lean_coord);
 }

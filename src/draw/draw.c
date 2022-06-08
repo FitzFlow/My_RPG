@@ -21,8 +21,6 @@ const sfRenderStates *states)
 {
     if (!object)
         return;
-    if (!my_strcmp(sfText_getString(object), "/"))
-        return;
     sfRenderWindow_drawText(renderWindow, object, states);
 }
 

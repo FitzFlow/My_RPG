@@ -37,13 +37,14 @@ sfVector2f get_pos_dialog(all_t *all, sfText *text)
 
 void draw_my_npc(all_t *all, npc_t *pnj)
 {
-    if (!GET_POS_S(PNJ_S).x && !GET_POS_S(PNJ_S).y)
+    if ((!GET_POS_S(PNJ_S).x && !GET_POS_S(PNJ_S).y))
         return;
     draw_sprite(WINDOW, PNJ_S, NULL);
+    if (MISSION != m_end_speak && MISSION != m_none)
+        return;
     if (pnj->i == 0 && *pnj->dialog)
-        TEXT = create_text((*pnj->dialog)[pnj->i], 15, FONT, sfBlack);
-    if (dist_btw_sprite(PNJ_S, PLAYER_S) <= DIST_INTERACTION && TEXT &&
-    MISSION != m_animation && MISSION != m_finish) {
+        TEXT = create_text((*pnj->dialog)[pnj->i], 15, FONT, sfWhite);
+    if (dist_btw_sprite(PNJ_S, PLAYER_S) <= DIST_INTERACTION && TEXT) {
         sfText_setPosition(TEXT, get_pos_dialog(all, TEXT));
         draw_sprite(WINDOW, all->INTERACT_E_S, NULL);
         draw_text(WINDOW, TEXT, NULL);
