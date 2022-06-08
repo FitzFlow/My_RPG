@@ -6,8 +6,8 @@
 */
 #include "rpg.h"
 
-void move_pnj(all_t *all, npc_t *john, sfVector2f sens, int direction)
+void move_pnj(all_t *all, npc_t *npc, sfVector2f sens, int direction)
 {
-    anim_all_npc(john->entity->sprite, all, direction);
-    sfSprite_move(john->entity->sprite, sens);
+    anim_all_npc(npc, all, direction);
+    sfSprite_move(npc->entity->sprite, sens);
 }

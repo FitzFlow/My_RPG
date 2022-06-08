@@ -96,6 +96,8 @@ int left);
 int init_path_for_(void);
 
 sfCircleShape *create_circle(sfVector2f pos, float radius, sfColor color);
+void draw_circle(sfRenderWindow *renderWindow, const sfCircleShape *object,
+const sfRenderStates *states);
 
 int animation_camera(int dist, sfView *view, sfVector2f end, sfVector2f sens);
 
@@ -133,7 +135,7 @@ npc_t **init_npc(char *cfg_folder);
 void spawn_pnj(all_t *all);
 void optimizing_pnj_detection(all_t *all);
 
-void anim_all_npc(sfSprite *sprite, all_t *all, int direction);
+void anim_all_npc(npc_t *npc, all_t *all, int direction);
 void draw_my_npc(all_t* all, npc_t* pnj);
 void draw_pnj_behind(all_t *all);
 void draw_pnj_front(all_t *all);
@@ -161,6 +163,10 @@ void mission_4(all_t *all, npc_t *freeze);
 void mission_5(all_t *all);
 void draw_lean_bottle(all_t *all);
 void get_lean_bottle(all_t *all);
+void fight(all_t *all, npc_t *npc, mission_e *ptr_mission);
+void mission_camera_animation(int dist, all_t *all, sfVector2f dest,
+sfVector2f sens);
+int interaction_is_finish(all_t *all, npc_t *npc);
 
 /*    PHONE    */
 void load_phone(all_t *all);

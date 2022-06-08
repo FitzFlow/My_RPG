@@ -7,7 +7,6 @@
 
 #ifndef GAME_H_
     #define GAME_H_
-    // #include "all.h"
     #include "entity.h"
 
 typedef enum state_game {

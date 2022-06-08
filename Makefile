@@ -84,10 +84,10 @@ OTHER	=	src/destroy.c \
 
 DIALOG	=	src/dialog/init_npc.c
 
-MISSION =   src/mission/mission_1/mission1.c \
-			src/mission/mission_2/mission2.c \
-			src/mission/mission_3/mission3.c \
-			src/mission/mission_4/mission4.c
+MISSION =   src/mission/fight.c\
+			src/mission/mission1.c \
+			src/mission/interaction.c \
+			src/mission/camera_animation.c
 
 FIGHT = 	src/fight_system/init_fight_scene.c \
 			src/fight_system/fight_system.c \

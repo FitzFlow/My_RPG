@@ -17,6 +17,8 @@ typedef struct entity {
     sfVector2f position;
     sfVector2f size;
     sfIntRect rect;
+    int height;
+    int left_begin;
 } entity_t;
 
 entity_t *init_entity(const char *texture, sfVector2f *pos, sfIntRect *rect);

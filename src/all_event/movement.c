@@ -54,7 +54,7 @@ bool check_collision_down(sfVector2f pos, sfImage *filter, int *change_draw)
 void movement(all_t *all)
 {
     if (all->state_of_game != game || FIGHT->fight1 == in_fight ||
-    MISSION1 == animation_mission)
+    MISSION == m_animation)
         return;
     anim_guy(all);
     if (all->interior_enum == in_city)

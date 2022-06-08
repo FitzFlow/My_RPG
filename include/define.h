@@ -140,7 +140,8 @@
     #define GET_POS_S(sprite) sfSprite_getPosition(sprite)
     #define PLAYER_S all->player->sprite
 
-    #define TEXT pnj->text[pnj->i]
+    #define TEXT pnj->text
+    #define FONT all->fight->fight_text.font
     #define ID_TEXT pnj->id_txt
 
     #define TOUCH(touch) sfKeyboard_isKeyPressed(touch)
@@ -150,10 +151,8 @@
     #define ALT_F4 KEY_RELEASE && KEY(sfKeyLAlt) && KEY(sfKeyF4)
 
     #define CIRCLE_M all->mission->circle_mission
-    #define MISSION1 all->mission->mission1
-    #define MISSION2 all->mission->mission2
-    #define MISSION3 all->mission->mission3
-    #define MISSION4 all->mission->mission4
+    #define MISSION all->mission->mission
+    #define CURRENT_MISSION all->mission->current_mission
 
     #define CLICK all->window->event.type == sfEvtMouseButtonPressed
     #define CLICKR all->window->event.type == sfEvtMouseButtonReleased

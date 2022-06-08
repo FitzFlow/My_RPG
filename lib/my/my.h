@@ -130,7 +130,6 @@ int open_file(char *path);
 FILE *fopen_file(char *path);
 char **get_file_in_folder(char *path_file);
 
-//à reparer
 int my_showstr(char *str);
 int my_showmem(char const *str, int size);
 #endif /* !LIBMY_H_ */

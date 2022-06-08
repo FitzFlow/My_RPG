@@ -26,6 +26,14 @@ const sfRenderStates *states)
     sfRenderWindow_drawText(renderWindow, object, states);
 }
 
+void draw_circle(sfRenderWindow *renderWindow, const sfCircleShape *object,
+const sfRenderStates *states)
+{
+    if (!object)
+        return;
+    sfRenderWindow_drawCircleShape(renderWindow, object, states);
+}
+
 void draw_array_text(sfRenderWindow *renderWindow, const sfText **object,
 const sfRenderStates *states)
 {

@@ -10,9 +10,9 @@
 void draw_mission(all_t *all)
 {
     mission_1(all, get_pnj_in_the_list(all->npc, "John WAIT"));
-    mission_2(all, get_pnj_in_the_list(all->npc, "John WAIT"));
+    /*mission_2(all, get_pnj_in_the_list(all->npc, "John WAIT"));
     mission_3(all, get_pnj_in_the_list(all->npc, "Big SMOKE"));
-    mission_4(all, get_pnj_in_the_list(all->npc, "Freeze CORLEONE"));
+    mission_4(all, get_pnj_in_the_list(all->npc, "Freeze CORLEONE"));*/
 }
 
 void draw_game(all_t *all)
@@ -47,7 +47,7 @@ void draw_game_and_house(all_t *all)
 
 void draw_mini_map(all_t *all)
 {
-    if (FIGHT->fight1 == in_fight || MISSION1 == animation_mission)
+    if (FIGHT->fight1 == in_fight || MISSION == m_animation)
         return;
     sfVector2f center = sfView_getCenter(all->view_player1);
 
@@ -71,11 +71,11 @@ void draw_all(all_t *all)
             sfRenderWindow_setView(WINDOW, all->view_player1);
         }
         draw_game_and_house(all);
-        if (all->mission->mission4 == start) {
-            draw_lean_bottle(all);
+        // if (all->mission->mission4 == start) {
+            // draw_lean_bottle(all);
             // get_lean_bottle(all);
-        }
-        if (MISSION1 != animation_mission && FIGHT->fight1 == not_in_fight) {
+        // }
+        if (MISSION != m_animation && FIGHT->fight1 == not_in_fight) {
             draw_phone(all);
             draw_pause(all);
         }

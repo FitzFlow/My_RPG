@@ -11,6 +11,10 @@
         "entity.h": "c",
         "menu_selection.h": "c",
         "rpg.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "mission.h": "c",
+        "define.h": "c",
+        "graphics.h": "c",
+        "camera_animation.C": "cpp"
     }
 }

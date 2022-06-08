@@ -19,9 +19,9 @@ static int interaction(all_t *all, npc_t *john, mission_enum_t mission, int i)
 
 void start_mission2(all_t *all, npc_t *john)
 {
-    if (MISSION1 == finish && all->interior_enum == player_house)
+    if (MISSION == finish && all->interior_enum == player_house)
         all->in_player_house = true;
-    if (MISSION1 == finish && all->interior_enum == in_city &&
+    if (MISSION == finish && all->interior_enum == in_city &&
     all->in_player_house == true) {
         // if (MISSION2 == m_none)
         //     (my_arraylen(john->dialog) >= 13) ? john->i = 13 : 0;
@@ -65,7 +65,7 @@ void dialog_end_mission2(all_t *all, npc_t *john)
 
 void mission_2(all_t *all, npc_t *john)
 {
-    if (!john || !john->entity || !john->entity->sprite || MISSION1 != finish ||
+    if (!john || !john->entity || !john->entity->sprite || MISSION != finish ||
     MISSION3 != m_none)
         return;
     start_mission2(all, john);

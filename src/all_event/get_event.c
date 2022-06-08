@@ -28,15 +28,15 @@ void interaction_npc(all_t *all)
 
     if (!npc || !npc->dialog)
         return;
-    // if (npc->i < my_arraylen(npc->dialog)) {
-    //     npc->i++;
-    // } else
-    //     npc->i = 0;
+    if ((*npc->dialog)[npc->i]) {
+        npc->i++;
+        npc->text = create_text((*npc->dialog)[npc->i], 15, FONT, sfBlack);
+    }
 }
 
 void pause_menu_event(all_t *all)
 {
-            animate_pause_btn(all);
+    animate_pause_btn(all);
     if (IN_PAUSE) {
         if (CLICK && MOUSE(sfMouseLeft) &&
         is_on_square_sprite_hud(WINDOW, v2f(492, 203), v2f(290, 74)))
