@@ -40,10 +40,10 @@ void draw_my_npc(all_t *all, npc_t *pnj)
     if (!GET_POS_S(PNJ_S).x && !GET_POS_S(PNJ_S).y)
         return;
     draw_sprite(WINDOW, PNJ_S, NULL);
-    if (pnj->i == 0)
+    if (pnj->i == 0 && *pnj->dialog)
         TEXT = create_text((*pnj->dialog)[pnj->i], 15, FONT, sfBlack);
     if (dist_btw_sprite(PNJ_S, PLAYER_S) <= DIST_INTERACTION && TEXT &&
-    MISSION != m_animation) {
+    MISSION != m_animation && MISSION != m_finish) {
         sfText_setPosition(TEXT, get_pos_dialog(all, TEXT));
         draw_sprite(WINDOW, all->INTERACT_E_S, NULL);
         draw_text(WINDOW, TEXT, NULL);

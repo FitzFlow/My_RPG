@@ -6,17 +6,17 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun  8 15:05:25 2022
+# Make data base, printed on Wed Jun  8 16:37:09 2022
 
 # Variables
 
-# makefile (from 'Makefile', line 117)
+# makefile (from 'Makefile', line 118)
 OBJ = $(SRC:.c=.o)
 # environment
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 100)
+# makefile (from 'Makefile', line 101)
 SRC = $(LOAD) $(DRAW) $(OTHER) $(PLAYER) $(ENTITY) $(DIALOG) $(ALL_EVENT) $(MAIN_MENU) $(CREATE_WINDOW) $(PHONE_ANIMATION) $(CREATE_STRUCTURE) $(MISSION) $(FIGHT) $(ASSETS)
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
@@ -74,9 +74,9 @@ XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.QBXHN1
 GNOME_TERMINAL_SERVICE = :1.126
 # makefile
 MAKEFLAGS = pqrR
-# makefile (from 'Makefile', line 98)
+# makefile (from 'Makefile', line 99)
 ASSETS = src/game_assets/init_game_assets.c
-# makefile (from 'Makefile', line 92)
+# makefile (from 'Makefile', line 93)
 FIGHT = src/fight_system/init_fight_scene.c src/fight_system/fight_system.c src/fight_system/fight_system2.c src/fight_system/fight_system3.c src/fight_system/button_interraction.c
 # makefile
 CURDIR := /home/x/delivery/My_RPG
@@ -84,12 +84,12 @@ CURDIR := /home/x/delivery/My_RPG
 VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# makefile (from 'Makefile', line 123)
+# makefile (from 'Makefile', line 124)
 IFLAGS = -I include/
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # makefile (from 'Makefile', line 87)
-MISSION = src/mission/fight.c src/mission/mission1.c src/mission/interaction.c src/mission/camera_animation.c
+MISSION = src/mission/fight.c src/mission/mission1.c src/mission/mission2.c src/mission/interaction.c src/mission/camera_animation.c
 # environment
 MFLAGS = -pqrR
 # environment
@@ -166,7 +166,7 @@ SNAP_USER_COMMON = /home/x/snap/code/common
 SNAP = /snap/code/97
 # makefile (from 'Makefile', line 30)
 ALL_EVENT = src/all_event/movement.c src/all_event/movement2.c src/all_event/movement3.c src/all_event/get_event.c src/all_event/window_event.c src/all_event/zoom_mini_map.c src/all_event/animation_camera.c src/all_event/set_game_in_pause.c
-# makefile (from 'Makefile', line 115)
+# makefile (from 'Makefile', line 116)
 MAIN = my_rpg.c
 # environment
 SNAP_REVISION = 97
@@ -184,7 +184,7 @@ LOAD = src/load/load_game.c src/load/load_menu.c src/load/load_phone.c src/load/
 ?F = $(notdir $?)
 # makefile (from 'Makefile', line 28)
 PHONE_ANIMATION = src/phone_animation/phone_animation.c
-# makefile (from 'Makefile', line 121)
+# makefile (from 'Makefile', line 122)
 NAME = my_rpg
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -232,7 +232,7 @@ SNAP_CONTEXT = urS7OkYHPiUwHOjkyJtJ9a-wgf11lfRFQcKYx6y59UxxL_GoXRYl
 PAGER = less
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
-# makefile (from 'Makefile', line 124)
+# makefile (from 'Makefile', line 125)
 CFLAGS = -W -Wall -Werror -Wextra -g $(IFLAGS)
 # environment
 COLORTERM = truecolor
@@ -248,7 +248,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 HOME = /home/x
 # environment
 QT_IM_MODULE = ibus
-# makefile (from 'Makefile', line 126)
+# makefile (from 'Makefile', line 127)
 FLAGSCSFML = -lcsfml-graphics -lcsfml-system -lcsfml-audio -lcsfml-window
 # environment
 ELECTRON_RUN_AS_NODE = 1
@@ -266,23 +266,22 @@ GSETTINGS_SCHEMA_DIR = /snap/code/97/usr/share/glib-2.0/schemas
 <F = $(notdir $<)
 # environment
 SNAP_VERSION = c3511e6c
-# makefile (from 'Makefile', line 119)
+# makefile (from 'Makefile', line 120)
 M_OBJ = $(MAIN:.c=.o)
 # default
 SUFFIXES := 
 # environment
- 
 VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VTE_VERSION = 6800
-# environment
  
+# environment
 SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
-# makefile (from 'Makefile', line 125)
+# makefile (from 'Makefile', line 126)
 LFLAGS = -L lib/my/ -lmy -lm
 # environment
 SNAP_USER_DATA = /home/x/snap/code/97
@@ -303,9 +302,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 66309, inode 4851976): 12 files, no impossibilities.
+# . (device 66309, inode 4851976): 14 files, no impossibilities.
 
-# 12 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -416,6 +415,12 @@ src/load/load_player_menu.o:
 #  File has not been updated.
 
 # Not a target:
+src/mission/mission2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 src/interior/enter_in_house.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -448,8 +453,7 @@ src/destroy_cis.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-06-08 15:05:16.703602194
+#  Last modified 2022-06-08 16:36:22.371769193
 #  File has been updated.
 #  Successfully updated.
 
@@ -499,7 +503,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 137):
+#  recipe to execute (from 'Makefile', line 138):
 	make -C ./lib/my clean
 	rm -f $(OBJ)
 	rm -f $(M_OBJ)
@@ -542,6 +546,7 @@ src/entity/anime_npc.o:
 #  File has not been updated.
 
 re: fclean all
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -580,7 +585,7 @@ val:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 143):
+#  recipe to execute (from 'Makefile', line 144):
 	gcc -o $(NAME) $(CFLAGS) $(IFLAGS) $(SRC) $(LFLAGS) -g -g3
 
 # Not a target:
@@ -613,7 +618,6 @@ all: loadlib my_rpg
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
- 
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 
@@ -621,7 +625,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 146):
+#  recipe to execute (from 'Makefile', line 147):
 	make -C ./lib/my fclean
 	rm -f $(NAME)
 
@@ -655,11 +659,11 @@ src/get_pnj_in_the_list.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-my_rpg: src/load/load_game.o src/load/load_menu.o src/load/load_phone.o src/load/load_filter.o src/load/load_pause_menu.o src/load/load_player_menu.o src/interior/init_interior.o src/interior/enter_in_house.o src/interior/enter_in_house2.o src/draw/draw.o src/draw/draw_text.o src/draw/draw_all.o src/draw/draw_car.o src/draw/draw_map.o src/draw/draw_pnj.o src/draw/draw_pause.o src/draw/draw_phone.o src/draw/draw_interior_house.o src/destroy.o src/destroy_bis.o src/destroy_cis.o src/collision.o src/play_music.o src/all_struct.o src/all_struct2.o src/create_text.o src/calcul_dist.o src/create_view.o src/is_on_sprite.o src/create_circle.o src/random_number.o src/get_file_in_array.o src/get_pnj_in_the_list.o src/player/init_player.o src/player/animation_player.o src/player/change_player_dress.o src/entity/set_pnj.o src/entity/init_pnj.o src/entity/move_npc.o src/entity/spawn_pnj.o src/entity/anime_npc.o src/entity/create_clock.o src/move_car/create_car.o src/move_car/create_car2.o src/move_car/create_car3.o src/move_car/create_car4.o src/dialog/init_npc.o src/all_event/movement.o src/all_event/movement2.o src/all_event/movement3.o src/all_event/get_event.o src/all_event/window_event.o src/all_event/zoom_mini_map.o src/all_event/animation_camera.o src/all_event/set_game_in_pause.o src/menu/main_menu/animate_button.o src/menu/main_menu/draw_main_menu.o src/menu/main_menu/draw_main_menu2.o src/menu/main_menu/interact_button.o src/menu/main_menu/interact_button2.o src/menu/main_menu/select_player_menu.o src/menu/main_menu/animate_hud_button.o src/menu/main_menu/interact_button/interact_pause_button.o src/create_window/print_usage.o src/create_window/create_window.o src/phone_animation/phone_animation.o src/create_structure/create_music.o src/create_structure/create_sprite.o src/mission/fight.o src/mission/mission1.o src/mission/interaction.o src/mission/camera_animation.o src/fight_system/init_fight_scene.o src/fight_system/fight_system.o src/fight_system/fight_system2.o src/fight_system/fight_system3.o src/fight_system/button_interraction.o src/game_assets/init_game_assets.o my_rpg.o
+my_rpg: src/load/load_game.o src/load/load_menu.o src/load/load_phone.o src/load/load_filter.o src/load/load_pause_menu.o src/load/load_player_menu.o src/interior/init_interior.o src/interior/enter_in_house.o src/interior/enter_in_house2.o src/draw/draw.o src/draw/draw_text.o src/draw/draw_all.o src/draw/draw_car.o src/draw/draw_map.o src/draw/draw_pnj.o src/draw/draw_pause.o src/draw/draw_phone.o src/draw/draw_interior_house.o src/destroy.o src/destroy_bis.o src/destroy_cis.o src/collision.o src/play_music.o src/all_struct.o src/all_struct2.o src/create_text.o src/calcul_dist.o src/create_view.o src/is_on_sprite.o src/create_circle.o src/random_number.o src/get_file_in_array.o src/get_pnj_in_the_list.o src/player/init_player.o src/player/animation_player.o src/player/change_player_dress.o src/entity/set_pnj.o src/entity/init_pnj.o src/entity/move_npc.o src/entity/spawn_pnj.o src/entity/anime_npc.o src/entity/create_clock.o src/move_car/create_car.o src/move_car/create_car2.o src/move_car/create_car3.o src/move_car/create_car4.o src/dialog/init_npc.o src/all_event/movement.o src/all_event/movement2.o src/all_event/movement3.o src/all_event/get_event.o src/all_event/window_event.o src/all_event/zoom_mini_map.o src/all_event/animation_camera.o src/all_event/set_game_in_pause.o src/menu/main_menu/animate_button.o src/menu/main_menu/draw_main_menu.o src/menu/main_menu/draw_main_menu2.o src/menu/main_menu/interact_button.o src/menu/main_menu/interact_button2.o src/menu/main_menu/select_player_menu.o src/menu/main_menu/animate_hud_button.o src/menu/main_menu/interact_button/interact_pause_button.o src/create_window/print_usage.o src/create_window/create_window.o src/phone_animation/phone_animation.o src/create_structure/create_music.o src/create_structure/create_sprite.o src/mission/fight.o src/mission/mission1.o src/mission/mission2.o src/mission/interaction.o src/mission/camera_animation.o src/fight_system/init_fight_scene.o src/fight_system/fight_system.o src/fight_system/fight_system2.o src/fight_system/fight_system3.o src/fight_system/button_interraction.o src/game_assets/init_game_assets.o my_rpg.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 131):
+#  recipe to execute (from 'Makefile', line 132):
 	gcc -o $(NAME) $(IFLAGS) $(OBJ) $(M_OBJ) $(LFLAGS) $(FLAGSCSFML)
 
 # Not a target:
@@ -747,6 +751,7 @@ loadlib:
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
+ 
 # @ := loadlib
 # automatic
 # * := 
@@ -763,9 +768,8 @@ loadlib:
 # automatic
 # | := 
 # variable set hash-table stats:
- 
 # Load=8/32=25%, Rehash=0, Collisions=1/11=9%
-#  recipe to execute (from 'Makefile', line 134):
+#  recipe to execute (from 'Makefile', line 135):
 	make -C ./lib/my
 
 # Not a target:
@@ -883,19 +887,20 @@ src/menu/main_menu/animate_button.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=10/187=5%
+# Load=90/1024=9%, Rehash=0, Collisions=10/189=5%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 102 / storage = 2275 B / avg = 22 B
-# current buf: size = 8162 B / used = 2275 B / count = 102 / avg = 22 B
+# strcache buffers: 1 (0) / strings = 103 / storage = 2298 B / avg = 22 B
+# current buf: size = 8162 B / used = 2298 B / count = 103 / avg = 22 B
 
-# strcache performance: lookups = 120 / hit rate = 15%
+# strcache performance: lookups = 123 / hit rate = 16%
 # hash-table stats:
-# Load=102/8192=1%, Rehash=0, Collisions=1/120=1%
-# Finished Make data base on Wed Jun  8 15:05:25 2022
+ 
+# Load=103/8192=1%, Rehash=0, Collisions=1/123=1%
+# Finished Make data base on Wed Jun  8 16:37:09 2022
 
  

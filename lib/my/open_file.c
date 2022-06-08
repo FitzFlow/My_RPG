@@ -23,7 +23,8 @@ FILE *fopen_file(char *path)
 {
     FILE *file = fopen(path, "w+");
 
-    if (!file) {return NULL;};
+    if (!file)
+        return NULL;
     fclose(file);
     return fopen(path, "rwb");
 }

@@ -76,5 +76,6 @@ all_t *load_all_struct(void)
     init_mission(all);
     PHONE_MODE = not_in_phone;
     load_all_pt2(all);
+    FIGHT->choose_option = not_in_selection;
     return (all);
 }

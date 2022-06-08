@@ -8,7 +8,8 @@
 #include "rpg.h"
 #include "define.h"
 
-void start_mission(all_t *all, npc_t *npc)
+void start_mission(all_t *all, npc_t *npc,
+sfVector2f sens_cam, sfVector2f sens_npc, int direction)
 {
     sfVector2f dest = {0, 0};
 
@@ -17,19 +18,16 @@ void start_mission(all_t *all, npc_t *npc)
     if (MISSION == m_none && interaction_is_finish(all, npc))
         MISSION = m_animation;
     if (MISSION == m_animation) {
-        mission_camera_animation(150, all, dest, v2f(2.5, -2.5));
-        move_pnj(all, npc, v2f(5, 0), 109);
+        mission_camera_animation(150, all, dest, sens_cam);
+        move_pnj(all, npc, sens_npc, direction);
     }
 }
 
-void end_mission1(all_t *all, npc_t *npc)
+void end_mission(all_t *all, npc_t *npc, sfVector2f pos)
 {
-    sfVector2f pos_j = {0, 0};
-
     if (MISSION == m_fight_win) {
-        move_pnj(all, npc, v2f(0, 5), 0);
-        pos_j = sfSprite_getPosition(npc->entity->sprite);
-        (pos_j.y == 350) ? MISSION = m_end_speak : 0;
+        SET_POS_S(npc->entity->sprite, pos);
+        MISSION = m_end_speak;
     }
     if (MISSION == m_end_speak && interaction_is_finish(all, npc))
         MISSION = m_finish;
@@ -42,9 +40,7 @@ void mission_1(all_t *all, npc_t *npc)
     if (CURRENT_MISSION != 1 || !npc || !npc->entity || !npc->entity->sprite)
         return;
     draw_my_npc(all, npc);
-    (MISSION == m_wait_fight || MISSION == m_animation) ?
-    draw_circle(WINDOW, CIRCLE_M, NULL) : 0;
-    start_mission(all, npc);
+    start_mission(all, npc, v2f(2.5, -2.5), v2f(5, 0), 109);
     fight(all, npc, &MISSION);
-    end_mission1(all, npc);
+    end_mission(all, npc, v2f(GET_POS_S(npc->entity->sprite).x, 350));
 }

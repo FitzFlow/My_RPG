@@ -10,8 +10,8 @@
 void draw_mission(all_t *all)
 {
     mission_1(all, get_pnj_in_the_list(all->npc, "John WAIT"));
-    /*mission_2(all, get_pnj_in_the_list(all->npc, "John WAIT"));
-    mission_3(all, get_pnj_in_the_list(all->npc, "Big SMOKE"));
+    mission_2(all, get_pnj_in_the_list(all->npc, "John WAIT"));
+    /*mission_3(all, get_pnj_in_the_list(all->npc, "Big SMOKE"));
     mission_4(all, get_pnj_in_the_list(all->npc, "Freeze CORLEONE"));*/
 }
 
@@ -20,28 +20,28 @@ void draw_game(all_t *all)
     if (STATE_OF_GAME != game)
         return;
     if (FIGHT->fight1 != in_fight) {
-    draw_sprite(WINDOW, all->game->map1->sprite, NULL);
-    draw_map_behind(all);
-    draw_pnj_behind(all);
-    draw_mission(all);
-    if (all->change_draw == 0)
-        draw_sprite(WINDOW, all->player->sprite, NULL);
-    draw_car(all);
-    draw_map_in_front_of(all);
-    draw_pnj_front(all);
-    if (all->change_draw == 1)
-        draw_sprite(WINDOW, all->player->sprite, NULL);
-    draw_interaction_player_house(all);
-    } else {
-        draw_mission(all);
+        draw_sprite(WINDOW, all->game->map1->sprite, NULL);
+        draw_map_behind(all);
+        draw_pnj_behind(all);
+        (MISSION == m_wait_fight || MISSION == m_animation) ?
+        draw_circle(WINDOW, CIRCLE_M, NULL) : 0;
+        if (all->change_draw == 0)
+            draw_sprite(WINDOW, all->player->sprite, NULL);
+        draw_car(all);
+        draw_map_in_front_of(all);
+        draw_pnj_front(all);
+        if (all->change_draw == 1)
+            draw_sprite(WINDOW, all->player->sprite, NULL);
+        draw_interaction_player_house(all);
+    } else
         draw_fight_sprite(all);
-    }
 }
 
 void draw_game_and_house(all_t *all)
 {
     if (all->interior_enum == in_city)
         draw_game(all);
+    draw_mission(all);
     draw_interior_house(all);
 }
 

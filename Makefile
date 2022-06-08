@@ -86,6 +86,7 @@ DIALOG	=	src/dialog/init_npc.c
 
 MISSION =   src/mission/fight.c\
 			src/mission/mission1.c \
+			src/mission/mission2.c \
 			src/mission/interaction.c \
 			src/mission/camera_animation.c
 

@@ -16,5 +16,5 @@
         "define.h": "c",
         "graphics.h": "c",
         "camera_animation.C": "cpp"
-    }
+    },
 }

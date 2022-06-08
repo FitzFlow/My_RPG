@@ -30,7 +30,8 @@ void interaction_npc(all_t *all)
         return;
     if ((*npc->dialog)[npc->i]) {
         npc->i++;
-        npc->text = create_text((*npc->dialog)[npc->i], 15, FONT, sfBlack);
+        if ((*npc->dialog)[npc->i])
+            npc->text = create_text((*npc->dialog)[npc->i], 15, FONT, sfBlack);
     }
 }
 

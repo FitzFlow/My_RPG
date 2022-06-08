@@ -122,7 +122,11 @@ npc_t **init_npc(char *cfg_folder)
     char **all_cfg_file = get_file_in_folder(cfg_folder);
     int nb_npc = my_arraylen(all_cfg_file);
 
-    if (!nb_npc) {perror("no npc loaded\n"); free_array(all_cfg_file); return NULL;}
+    if (!nb_npc) {
+        perror("no npc loaded\n");
+        free_array(all_cfg_file);
+        return NULL;
+    }
     list = malloc(sizeof(npc_t *) * (nb_npc + 1));
     for (int i = 0; all_cfg_file[i]; i++)
         list[i] = create_npc(all_cfg_file[i]);
