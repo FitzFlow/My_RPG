@@ -17,7 +17,9 @@ void mission_3(all_t *all, npc_t *npc)
     }
     if (CURRENT_MISSION != 3 || !npc || !npc->entity || !npc->entity->sprite)
         return;
-    draw_my_npc(all, npc);
-    if (MISSION == m_none && interaction_is_finish(all, npc))
+    draw_my_npc(all, npc, MISSION);
+    if (MISSION == m_none && interaction_is_finish(all, npc)) {
         MISSION = m_finish;
+        CURRENT_MISSION++;
+    }
 }

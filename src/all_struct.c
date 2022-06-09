@@ -19,7 +19,9 @@ void init_mission(all_t *all)
 {
     all->mission = malloc(sizeof(*all->mission));
     MISSION = m_none;
-    CURRENT_MISSION = 1;
+    _2NDE_M = malloc(sizeof(*_2NDE_M) * 1);
+    _2NDE_M[0] = m_none;
+    CURRENT_MISSION = 4;
     CIRCLE_M = create_circle(v2f(2570, 440), 15, sfYellow);
 }
 

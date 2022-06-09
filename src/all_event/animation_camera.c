@@ -6,13 +6,13 @@
 */
 #include "rpg.h"
 
-int animation_camera(int dist, sfView *view, sfVector2f end, sfVector2f sens)
+int animation_camera(sfView *view, sfVector2f dest, int speed)
 {
     sfVector2f pos = sfView_getCenter(view);
-
-    pos.x = pos.x - 100;
-    pos.y = pos.y - 100;
-    if (dist_btw_point(pos, end) > dist) {
+    sfVector2f sens = {(pos.x - dest.x) / speed, (pos.y - dest.y) / speed};
+    sens.x *= -1;
+    sens.y *= -1;
+    if (dist_btw_point(pos, dest) >= 50) {
         sfView_move(view, sens);
         return 1;
     }

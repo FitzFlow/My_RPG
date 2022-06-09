@@ -153,6 +153,7 @@
 
     #define CIRCLE_M all->mission->circle_mission
     #define MISSION all->mission->mission
+    #define _2NDE_M all->mission->secondary_mission
     #define CURRENT_MISSION all->mission->current_mission
 
     #define CLICK all->window->event.type == sfEvtMouseButtonPressed
