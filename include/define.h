@@ -108,6 +108,7 @@
     #define IN_PAUSE all->game_pause == in_pause
     #define NOT_IN_PAUSE all->game_pause == not_in_pause
 
+    #define DEBUG all->debug
     #define STATE_OF_GAME all->state_of_game
     #define SELECT_PLAYER all->select_player->character_menu
 
@@ -136,7 +137,11 @@
 //------------------------------Shortcuts--------------------------------------
 
     #define SELECT_PLAYER_G "assets/main_menu/perso.png"
+
     #define GET_RECT(sprite) sfSprite_getTextureRect(sprite)
+    #define SET_POS_RECT(rect, x_y) sfRectangleShape_setPosition(rect, x_y)
+    #define GET_POS_RECT(rect) sfRectangleShape_getPosition(rect)
+
     #define GET_POS_S(sprite) sfSprite_getPosition(sprite)
     #define SET_POS_S(sprite, x_y) sfSprite_setPosition(sprite, x_y)
     #define PLAYER_S all->player->sprite

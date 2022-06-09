@@ -9,6 +9,8 @@
 
 void set_in_pause(all_t *all)
 {
+    if (MISSION == m_animation)
+        return;
     if (((CLICK && MOUSE(sfMouseLeft)) || (KEY_RELEASE && KEY(sfKeyEscape))) &&
     NOT_IN_PAUSE && FIGHT->fight1 != in_fight) {
         if (is_on_sprite_hud(WINDOW, 48, v2f(1217, 58)) || KEY(sfKeyEscape))
