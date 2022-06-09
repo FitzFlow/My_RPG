@@ -11,7 +11,7 @@ void draw_mission(all_t *all)
 {
     mission_1(all, get_pnj_in_the_list(all->npc, "John WAIT"));
     mission_2(all, get_pnj_in_the_list(all->npc, "John WAIT"));
-    mission_4(all, get_pnj_in_the_list(all->npc, "Freeze CORLEONE"));
+    mission_4(all, get_pnj_in_the_list(all->npc, "Freeze CORLEONE"), &_2NDE_M[0]);
 }
 
 void draw_game(all_t *all)
@@ -70,9 +70,8 @@ void draw_all(all_t *all)
             sfRenderWindow_setView(WINDOW, all->view_player1);
         }
         draw_game_and_house(all);
-        if (all->mission->mission == m_wait_fight) {
+        if (_2NDE_M[0] == m_wait_fight)
             draw_lean_bottle(all);
-        }
         if (MISSION != m_animation && FIGHT->fight1 == not_in_fight) {
             draw_phone(all);
             draw_pause(all);

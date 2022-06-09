@@ -99,7 +99,7 @@ sfCircleShape *create_circle(sfVector2f pos, float radius, sfColor color);
 void draw_circle(sfRenderWindow *renderWindow, const sfCircleShape *object,
 const sfRenderStates *states);
 
-int animation_camera(int dist, sfView *view, sfVector2f end, sfVector2f sens);
+int animation_camera(sfView *view, sfVector2f dest, int speed);
 
 void animate_first_button(all_t *all);
 void interact_with_button(all_t *all);
@@ -136,7 +136,7 @@ void spawn_pnj(all_t *all);
 void optimizing_pnj_detection(all_t *all);
 
 void anim_all_npc(npc_t *npc, all_t *all, int direction);
-void draw_my_npc(all_t* all, npc_t* pnj);
+void draw_my_npc(all_t* all, npc_t* pnj, mission_e mission);
 void draw_pnj_behind(all_t *all);
 void draw_pnj_front(all_t *all);
 void move_pnj(all_t *all, npc_t *john, sfVector2f sens, int direction);
@@ -159,16 +159,14 @@ void draw_pause(all_t *all);
 void mission_1(all_t *all, npc_t *john);
 void mission_2(all_t *all, npc_t *john);
 void mission_3(all_t *all, npc_t *luidji);
-void mission_4(all_t *all, npc_t *freeze);
+void mission_4(all_t *all, npc_t *npc, mission_e *p_mission);
 void mission_5(all_t *all);
 void draw_lean_bottle(all_t *all);
-void get_lean_bottle(all_t *all);
-void start_mission(all_t *all, npc_t *npc,
-sfVector2f sens_cam, sfVector2f sens_npc, int direction);
+void get_lean_bottle(all_t *all, mission_e *p_mission);
+void start_mission(all_t *all, npc_t *npc, sfVector2f sens_npc, int direction);
 void end_mission(all_t *all, npc_t *npc, sfVector2f pos);
 void fight(all_t *all, npc_t *npc, mission_e *ptr_mission);
-void mission_camera_animation(int dist, all_t *all, sfVector2f dest,
-sfVector2f sens);
+void mission_camera_animation(all_t *all, sfVector2f dest, int speed);
 int interaction_is_finish(all_t *all, npc_t *npc);
 
 /*    PHONE    */

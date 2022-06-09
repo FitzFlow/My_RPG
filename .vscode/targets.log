@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jun  8 18:46:46 2022
+# Make data base, printed on Thu Jun  9 14:23:00 2022
 
 # Variables
 
@@ -16,16 +16,18 @@ OBJ = $(SRC:.c=.o)
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 103)
-SRC = $(LOAD) $(DRAW) $(OTHER) $(PLAYER) $(ENTITY) $(DIALOG) $(ALL_EVENT) $(MAIN_MENU) $(CREATE_WINDOW) $(PHONE_ANIMATION) $(CREATE_STRUCTURE) $(MISSION) $(FIGHT) $(ASSETS)
+# environment
+NO_AT_BRIDGE = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
+# makefile (from 'Makefile', line 103)
+SRC = $(LOAD) $(DRAW) $(OTHER) $(PLAYER) $(ENTITY) $(DIALOG) $(ALL_EVENT) $(MAIN_MENU) $(CREATE_WINDOW) $(PHONE_ANIMATION) $(CREATE_STRUCTURE) $(MISSION) $(FIGHT) $(ASSETS)
 # environment
 SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b1a60ed0-b327-4bd6-ad2e-7dca67d4e5a6.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-91c71b46-c68a-4966-8dec-559ea916960a.sock
 # environment
 VSCODE_CWD = /home/x
 # default
@@ -65,25 +67,27 @@ VSCODE_CODE_CACHE_PATH = /home/x/.config/Code/CachedData/c3511e6c69bb39013c4a4b7
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.QBXHN1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.P9RGN1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.126
+GNOME_TERMINAL_SERVICE = :1.3719
 # makefile
 MAKEFLAGS = pqrR
 # makefile (from 'Makefile', line 101)
 ASSETS = src/game_assets/init_game_assets.c
 # makefile (from 'Makefile', line 95)
 FIGHT = src/fight_system/init_fight_scene.c src/fight_system/fight_system.c src/fight_system/fight_system2.c src/fight_system/fight_system3.c src/fight_system/button_interraction.c
+# environment
+DBUS_STARTER_ADDRESS = unix:path=/run/user/1000/bus,guid=37b4c4f795d97cf18c228ace62a1bc8a
 # makefile
 CURDIR := /home/x/delivery/My_RPG
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'Makefile', line 126)
 IFLAGS = -I include/
 # automatic
@@ -110,16 +114,17 @@ SNAP_REEXEC =
 @F = $(notdir $@)
 # environment
 ZSH = /home/x/.oh-my-zsh
+ 
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 5190
+VSCODE_PID = 142625
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/x:@/tmp/.ICE-unix/1975,unix/x:/tmp/.ICE-unix/1975
+SESSION_MANAGER = local/x:@/tmp/.ICE-unix/1938,unix/x:/tmp/.ICE-unix/1938
 # automatic
 *F = $(notdir $*)
 # makefile (from 'Makefile', line 45)
@@ -147,7 +152,7 @@ SHLVL = 1
 # makefile (from 'Makefile', line 18)
 DRAW = src/draw/draw.c src/draw/draw_text.c src/draw/draw_all.c src/draw/draw_car.c src/draw/draw_map.c src/draw/draw_pnj.c src/draw/draw_pause.c src/draw/draw_phone.c src/draw/draw_interior_house.c
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ba8503eb_f574_4764_ba6a_9e3203275cb8
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b740e7fb_1189_4c5e_b443_fcc1fe6d5dfe
 # environment
 MAKELEVEL := 0
 # default
@@ -213,7 +218,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1999
+SYSTEMD_EXEC_PID = 2166
 # environment
 DISPLAY = :1
 # environment
@@ -228,6 +233,8 @@ DISABLE_WAYLAND = 1
 SNAP_DATA = /var/snap/code/97
 # environment
 SNAP_CONTEXT = urS7OkYHPiUwHOjkyJtJ9a-wgf11lfRFQcKYx6y59UxxL_GoXRYl
+# environment
+DBUS_STARTER_BUS_TYPE = session
 # environment
 PAGER = less
 # environment
@@ -292,9 +299,8 @@ CREATE_STRUCTURE = src/create_structure/create_music.c src/create_structure/crea
 GDMSESSION = ubuntu-wayland
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
- 
 # variable set hash-table stats:
-# Load=141/1024=14%, Rehash=0, Collisions=16/194=8%
+# Load=144/1024=14%, Rehash=0, Collisions=21/197=11%
 
 # Pattern-specific Variable Values
 
@@ -302,9 +308,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # Directories
 
-# . (device 66309, inode 4851976): 13 files, no impossibilities.
+# . (device 66309, inode 4851976): 11 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -409,6 +415,7 @@ src/fight_system/fight_system3.o:
 #  File has not been updated.
 
 # Not a target:
+ 
 src/load/load_player_menu.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -453,7 +460,7 @@ src/destroy_cis.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-08 18:46:41.696150583
+#  Last modified 2022-06-09 09:30:06.499954305
 #  File has been updated.
 #  Successfully updated.
 
@@ -606,7 +613,6 @@ src/phone_animation/phone_animation.o:
 #  File has not been updated.
 
 # Not a target:
- 
 src/collision.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -708,6 +714,7 @@ src/fight_system/fight_system.o:
 #  Modification time never checked.
 #  File has not been updated.
 
+ 
 # Not a target:
 src/entity/spawn_pnj.o:
 #  Implicit rule search has not been done.
@@ -898,7 +905,6 @@ src/menu/main_menu/animate_button.o:
 #  File has not been updated.
 
 # files hash-table stats:
- 
 # Load=92/1024=9%, Rehash=0, Collisions=12/193=6%
 # VPATH Search Paths
 
@@ -906,12 +912,12 @@ src/menu/main_menu/animate_button.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 105 / storage = 2344 B / avg = 22 B
-# current buf: size = 8162 B / used = 2344 B / count = 105 / avg = 22 B
+# strcache buffers: 1 (0) / strings = 104 / storage = 2333 B / avg = 22 B
+# current buf: size = 8162 B / used = 2333 B / count = 104 / avg = 22 B
 
-# strcache performance: lookups = 124 / hit rate = 15%
+# strcache performance: lookups = 122 / hit rate = 14%
 # hash-table stats:
-# Load=105/8192=1%, Rehash=0, Collisions=1/124=1%
-# Finished Make data base on Wed Jun  8 18:46:46 2022
+# Load=104/8192=1%, Rehash=0, Collisions=1/122=1%
+# Finished Make data base on Thu Jun  9 14:23:00 2022
 
  

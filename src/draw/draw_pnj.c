@@ -35,12 +35,12 @@ sfVector2f get_pos_dialog(all_t *all, sfText *text)
     return center;
 }
 
-void draw_my_npc(all_t *all, npc_t *pnj)
+void draw_my_npc(all_t *all, npc_t *pnj, mission_e mission)
 {
     if ((!GET_POS_S(PNJ_S).x && !GET_POS_S(PNJ_S).y))
         return;
     draw_sprite(WINDOW, PNJ_S, NULL);
-    if (MISSION != m_end_speak && MISSION != m_none)
+    if (mission != m_end_speak && mission != m_none)
         return;
     if (pnj->i == 0 && *pnj->dialog)
         TEXT = create_text((*pnj->dialog)[pnj->i], 15, FONT, sfWhite);

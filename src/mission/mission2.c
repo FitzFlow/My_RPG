@@ -22,8 +22,8 @@ void mission_2(all_t *all, npc_t *npc)
         return;
     if (all->interior_enum != in_city)
         return;
-    draw_my_npc(all, npc);
-    start_mission(all, npc, v2f(-2.5, -1), v2f(5, 0), 109);
+    draw_my_npc(all, npc, MISSION);
+    start_mission(all, npc, v2f(5, 0), 109);
     fight(all, npc, &MISSION);
     end_mission(all, npc, v2f(1350, 610));
 }

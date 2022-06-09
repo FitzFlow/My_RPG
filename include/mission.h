@@ -16,11 +16,13 @@ typedef enum mission_enum_e{
     m_fight_win,
     m_end_speak,
     m_finish,
+    m_end,
 } mission_e;
 
 typedef struct mission {
     sfCircleShape *circle_mission;
     mission_e mission;
+    mission_e *secondary_mission;
     int current_mission;
 } mission_t;
 
