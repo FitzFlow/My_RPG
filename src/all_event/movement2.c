@@ -37,12 +37,17 @@ void move(all_t *all, int x, int y)
 void game_collision(all_t *all, sfImage *img)
 {
     sfVector2f pos = GET_POS_S(PLAYER_S);
-    if (!check_collision_right(pos, img, &all->change_draw) && TOUCH(sfKeyD))
-        move(all, 5, 0);
-    if (!check_collision_left(pos, img, &all->change_draw) && TOUCH(sfKeyQ))
-        move(all, -5, 0);
-    if (!check_collision_down(pos, img, &all->change_draw) && TOUCH(sfKeyS))
-        move(all, 0, 5);
-    if (!check_collision_up(pos, img, &all->change_draw) && TOUCH(sfKeyZ))
-        move(all, 0, -5);
+
+    if (!check_collision_right(pos, img, &all->change_draw,
+    &DEBUG->all_debug[0]) && TOUCH(sfKeyD))
+        move(all, PLAYER->speed, 0);
+    if (!check_collision_left(pos, img, &all->change_draw,
+    &DEBUG->all_debug[0]) && TOUCH(sfKeyQ))
+        move(all, PLAYER->speed * -1, 0);
+    if (!check_collision_down(pos, img, &all->change_draw,
+    &DEBUG->all_debug[0]) && TOUCH(sfKeyS))
+        move(all, 0, PLAYER->speed);
+    if (!check_collision_up(pos, img, &all->change_draw,
+    &DEBUG->all_debug[0]) && TOUCH(sfKeyZ))
+        move(all, 0, PLAYER->speed * -1);
 }

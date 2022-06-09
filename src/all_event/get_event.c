@@ -80,5 +80,6 @@ void event(all_t *all)
         zoom_mini_map(all);
         if (STATE_OF_GAME == game)
             event_in_game(all);
+        active_btn(all);
     }
 }

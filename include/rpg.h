@@ -8,6 +8,7 @@
 #ifndef RPG_H_
     #define RPG_H_
     #include "all.h"
+    #include "debugger.h"
 
 typedef struct all_struct {
     window_t *window;
@@ -39,6 +40,7 @@ typedef struct all_struct {
     mission_t *mission;
     fight_t *fight;
     lean_bottle_t **lean;
+    debugger_t *debug;
 } all_t;
 
 void print_usage(void);
@@ -111,10 +113,14 @@ bool check_x(sfVector2f pos, sfVector2f sens, sfImage *filter, int *change_d);
 bool check_y(sfVector2f pos, sfVector2f sens, sfImage *filter, int *change_d);
 bool check_up(sfVector2f pos, sfImage *filter, int *change_draw);
 void game_collision(all_t *all, sfImage *img);
-bool check_collision_up(sfVector2f pos, sfImage *filter, int *change_draw);
-bool check_collision_down(sfVector2f pos, sfImage *filter, int *change_draw);
-bool check_collision_left(sfVector2f pos, sfImage *filter, int *change_draw);
-bool check_collision_right(sfVector2f pos, sfImage *filter, int *change_draw);
+bool check_collision_up(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug);
+bool check_collision_down(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug);
+bool check_collision_left(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug);
+bool check_collision_right(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug);
 
 bool check_resize_right(sfVector2f pos, sfImage *filter,
 int *change_draw, int i);
@@ -128,6 +134,10 @@ int *change_draw, int i);
 void resize_interaction(all_t *all, sfVector2f player_pos);
 
 void load_all_pt2(all_t *all);
+
+sfRectangleShape *create_rect(sfVector2f pos, sfVector2f size, sfColor color);
+void draw_rect(sfRenderWindow *renderWindow, const sfRectangleShape *object,
+const sfRenderStates *states);
 
 /*     PNJ     */
 void init_pnj_and_npc(all_t *all);
@@ -239,5 +249,10 @@ void move_car_five(all_t *all);
 void move_car_six(all_t *all);
 void dont_touch_me(all_t *all);
 void move_car_seven(all_t *all);
+
+/*    DEBUGGER    */
+debugger_t *load_debugger(void);
+void debugger(all_t *all);
+void active_btn(all_t *all);
 
 #endif

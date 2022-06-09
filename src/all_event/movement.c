@@ -7,9 +7,10 @@
 
 #include "rpg.h"
 
-bool check_collision_right(sfVector2f pos, sfImage *filter, int *change_draw)
+bool check_collision_right(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug)
 {
-    if (!filter)
+    if (!filter || *debug)
         return false;
     for (int i = 0; 40 + i <= 48; i++) {
         if (check_resize_right(pos, filter, change_draw, i) == true)
@@ -18,9 +19,10 @@ bool check_collision_right(sfVector2f pos, sfImage *filter, int *change_draw)
     return false;
 }
 
-bool check_collision_left(sfVector2f pos, sfImage *filter, int *change_draw)
+bool check_collision_left(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug)
 {
-    if (!filter)
+    if (!filter || *debug)
         return false;
     for (int i = 0; i <= 8; i++) {
         if (check_resize_left(pos, filter, change_draw, i) == true)
@@ -29,9 +31,10 @@ bool check_collision_left(sfVector2f pos, sfImage *filter, int *change_draw)
     return false;
 }
 
-bool check_collision_up(sfVector2f pos, sfImage *filter, int *change_draw)
+bool check_collision_up(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug)
 {
-    if (!filter)
+    if (!filter || *debug)
         return false;
     for (int i = 9; i < 22; i++) {
         if (check_resize_up(pos, filter, change_draw, i) == true)
@@ -40,9 +43,10 @@ bool check_collision_up(sfVector2f pos, sfImage *filter, int *change_draw)
     return false;
 }
 
-bool check_collision_down(sfVector2f pos, sfImage *filter, int *change_draw)
+bool check_collision_down(sfVector2f pos, sfImage *filter, int *change_draw,
+bool *debug)
 {
-    if (!filter)
+    if (!filter || *debug)
         return false;
     for (int i = 9; i < 22; i++) {
         if (check_resize_down(pos, filter, change_draw, i) == true)

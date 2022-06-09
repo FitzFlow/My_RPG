@@ -24,6 +24,14 @@ const sfRenderStates *states)
     sfRenderWindow_drawText(renderWindow, object, states);
 }
 
+void draw_rect(sfRenderWindow *renderWindow, const sfRectangleShape *object,
+const sfRenderStates *states)
+{
+    if (!object)
+        return;
+    sfRenderWindow_drawRectangleShape(renderWindow, object, states);
+}
+
 void draw_circle(sfRenderWindow *renderWindow, const sfCircleShape *object,
 const sfRenderStates *states)
 {

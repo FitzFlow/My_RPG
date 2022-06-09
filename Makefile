@@ -9,6 +9,7 @@ LOAD	=	src/load/load_game.c \
 			src/load/load_menu.c \
 			src/load/load_phone.c \
 			src/load/load_filter.c \
+			src/load/load_debugger.c \
 			src/load/load_pause_menu.c \
 			src/load/load_player_menu.c \
 			src/interior/init_interior.c \
@@ -75,6 +76,7 @@ OTHER	=	src/destroy.c \
 			src/all_struct2.c \
 			src/create_text.c \
 			src/calcul_dist.c \
+			src/create_rect.c \
 			src/create_view.c \
 			src/is_on_sprite.c \
 			src/create_circle.c \
@@ -100,20 +102,23 @@ FIGHT = 	src/fight_system/init_fight_scene.c \
 
 ASSETS = 	src/game_assets/init_game_assets.c
 
+DEBUG	=	src/debug/debugger.c
+
 SRC	=	$(LOAD) \
 		$(DRAW) \
 		$(OTHER) \
+		$(DEBUG) \
+		$(FIGHT) \
+		$(ASSETS) \
 		$(PLAYER) \
 		$(ENTITY) \
 		$(DIALOG) \
+		$(MISSION) \
 		$(ALL_EVENT) \
 		$(MAIN_MENU) \
 		$(CREATE_WINDOW) \
 		$(PHONE_ANIMATION) \
 		$(CREATE_STRUCTURE) \
-		$(MISSION) \
-		$(FIGHT) \
-		$(ASSETS)
 
 MAIN	=	my_rpg.c
 

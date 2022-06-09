@@ -21,7 +21,7 @@ void init_mission(all_t *all)
     MISSION = m_none;
     _2NDE_M = malloc(sizeof(*_2NDE_M) * 1);
     _2NDE_M[0] = m_none;
-    CURRENT_MISSION = 4;
+    CURRENT_MISSION = 1;
     CIRCLE_M = create_circle(v2f(2570, 440), 15, sfYellow);
 }
 
@@ -79,5 +79,6 @@ all_t *load_all_struct(void)
     PHONE_MODE = not_in_phone;
     load_all_pt2(all);
     FIGHT->choose_option = not_in_selection;
+    all->debug = load_debugger();
     return (all);
 }
